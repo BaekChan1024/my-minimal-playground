@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+project_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+cd "$project_dir"
+
+usage() {
+    printf '사용법: ./play [guided|shell|verify]\n'
+}
+
+mode="${1:-menu}"
+if [[ $# -gt 1 ]]; then usage; exit 2; fi
+case "$mode" in menu|guided|shell|verify) ;; *) usage; exit 2 ;; esac
+
+if [[ "$mode" == menu ]]; then
+    printf '\nKafka 01 — 로그와 오프셋 실습\n\n'
+    printf '  1) 안내에 따라 실습하기 (추천)\n  2) 명령어로 자유 실습하기\n  3) 자동 검증 실행하기\n  0) 종료\n\n'
+    printf '번호를 선택하세요 [기본 1]: '
+    if ! IFS= read -r choice; then exit 0; fi
+    case "${choice:-1}" in
+        1) mode=guided ;;
+        2) mode=shell ;;
+        3) mode=verify ;;
+        0) exit 0 ;;
+        *) printf '0~3 중 하나를 선택해 다시 실행하세요.\n' >&2; exit 2 ;;
+    esac
+fi
+
+# Prefer an installed JDK 21; no downloads or system settings changes here.
+if [[ "$(uname -s)" == Darwin && -x /usr/libexec/java_home ]]; then
+    if detected_jdk=$(/usr/libexec/java_home -v 21 2>/dev/null); then
+        export JAVA_HOME="$detected_jdk"
+    fi
+fi
+
+if [[ -n "${JAVA_HOME:-}" && -x "$JAVA_HOME/bin/java" ]]; then
+    java_cmd="$JAVA_HOME/bin/java"
+elif command -v java >/dev/null 2>&1; then
+    java_cmd="$(command -v java)"
+else
+    printf 'JDK 21이 필요합니다. 설치 후 다시 실행하세요: https://adoptium.net/temurin/releases/?version=21\n' >&2
+    exit 1
+fi
+
+if ! java_info=$("$java_cmd" -version 2>&1); then
+    printf 'Java를 실행할 수 없습니다. JDK 21 설치와 JAVA_HOME 설정을 확인하세요.\n' >&2
+    exit 1
+fi
+if [[ ! "$java_info" =~ version\ \"21([.\"]|-) ]]; then
+    printf '이 실행 도구는 JDK 21을 사용합니다. JDK 21 설치와 JAVA_HOME 설정을 확인하세요.\n' >&2
+    exit 1
+fi
+
+printf '\n로컬 Kafka를 준비합니다. 최초 실행에는 의존성 다운로드가 필요합니다.\n'
+case "$mode" in
+    guided) exec ./gradlew :kafka:01-log-and-offset:run --args=guided --console=plain --quiet ;;
+    shell) exec ./gradlew :kafka:01-log-and-offset:run --console=plain --quiet ;;
+    verify) exec ./gradlew :kafka:01-log-and-offset:verifyLab --console=plain --quiet ;;
+esac

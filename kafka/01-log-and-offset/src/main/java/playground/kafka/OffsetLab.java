@@ -21,13 +21,14 @@ public final class OffsetLab implements AutoCloseable {
     private Admin admin;
 
     public static void main(String[] args) throws Exception {
-        if (args.length > 1 || (args.length == 1 && !args[0].equals("verify"))) {
-            throw new IllegalArgumentException("Usage: OffsetLab [verify]");
+        if (args.length > 1 || (args.length == 1 && !Set.of("verify", "guided").contains(args[0]))) {
+            throw new IllegalArgumentException("Usage: OffsetLab [verify|guided]");
         }
         try (var lab = new OffsetLab()) {
             lab.start();
-            if (args.length == 1) lab.verify();
-            else lab.shell();
+            if (args.length == 0) lab.shell();
+            else if (args[0].equals("guided")) lab.guided();
+            else lab.verify();
         }
     }
 
@@ -137,6 +138,63 @@ public final class OffsetLab implements AutoCloseable {
         var expected = new Observation(offsets, position, committed);
         if (!expected.equals(actual)) throw new AssertionError(scenario + ": expected=" + expected + ", actual=" + actual);
         System.out.println("PASS: " + scenario);
+    }
+
+    private void guided() throws Exception {
+        System.out.println("""
+
+                Kafka 01 안내 실습
+                명령어를 외우지 않아도 됩니다. 결과를 예상한 뒤 Enter를 눌러 실행하세요.
+                각 단계에서 q를 입력하면 종료합니다. 정상 종료 시 임시 데이터가 정리됩니다.
+                """);
+        try (var input = new Scanner(System.in)) {
+            int count;
+            while (true) {
+                System.out.print("한 번에 읽을 개수 [1~3, 기본 2, q 종료]: ");
+                if (!input.hasNextLine()) return;
+                String answer = input.nextLine().trim();
+                if (answer.equalsIgnoreCase("q")) return;
+                if (answer.isEmpty()) { count = 2; break; }
+                if (Set.of("1", "2", "3").contains(answer)) { count = Integer.parseInt(answer); break; }
+                System.out.println("1, 2, 3 중 하나를 입력하세요.");
+            }
+            if (!next(input, "1/6 레코드 저장", "A, B, C를 저장하면 offset과 로그의 끝은 각각 얼마일까요?")) return;
+            seed();
+            status("study");
+
+            if (!next(input, "2/6 커밋 없이 읽기", count + "개를 읽으면 position과 committed가 같아질까요?")) return;
+            read("study", count, false, null);
+            status("study");
+
+            if (!next(input, "3/6 새 Consumer로 읽고 커밋", "앞에서 읽었던 레코드가 다시 나올까요?")) return;
+            read("study", count, true, null);
+            status("study");
+
+            if (!next(input, "4/6 저장한 위치에서 이어 읽기", "earliest 설정이 있어도 처음부터 읽을까요? 남은 레코드까지만 읽습니다.")) return;
+            read("study", 3, true, null);
+            status("study");
+
+            if (!next(input, "5/6 다른 그룹으로 읽기", "audit 그룹은 study가 읽은 A, B, C를 볼 수 있을까요?")) return;
+            read("audit", 3, true, null);
+            status("audit");
+
+            if (!next(input, "6/6 현재 위치만 되돌리기", "seek로 다시 읽은 뒤, 새 Consumer도 처음부터 읽을까요?")) return;
+            read("study", 3, false, 0L);
+            status("study");
+            read("study", 1, false, null);
+            System.out.println("""
+
+                    실습을 마쳤습니다. 자동 실행 완료가 숙지 완료를 뜻하지는 않습니다.
+                    position·committed의 차이와 earliest·seek의 결과를 자기 말로 설명해 보세요.
+                    다시 실행하며 읽을 개수를 바꾸면 같은 원리를 다른 조건에서 확인할 수 있습니다.
+                    """);
+        }
+    }
+
+    private static boolean next(Scanner input, String title, String question) {
+        System.out.printf("%n%s%n예상해 보기: %s%nEnter 실행 / q 종료: ", title, question);
+        if (!input.hasNextLine()) return false;
+        return !input.nextLine().trim().equalsIgnoreCase("q");
     }
 
     private void shell() throws Exception {

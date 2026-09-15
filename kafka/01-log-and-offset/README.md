@@ -4,7 +4,8 @@
 
 이번 실습에서는 Kafka 레코드의 위치, Consumer의 현재 위치, 그룹에 저장한 재시작 위치를 구분합니다.
 
-- [상세 글](ARTICLE.md)
+- [블로그에서 상세 글 읽기 →](https://blog.baekchan.com/post/kafka-첫-실습-읽은-메시지는-사라질까-로그오프셋커밋-이해하기)
+- [position·seek·commit·ack 보충 글](https://blog.baekchan.com/post/kafka의-positionseekcommitack-읽은-위치와-처리-완료는-어떻게-다를까)
 - [먼저 풀어 볼 실습 문제](EXERCISES.md)
 - [실행 후 확인할 해설](ANSWERS.md)
 - [검증 기록](VERIFICATION.md)

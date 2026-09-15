@@ -1,17 +1,20 @@
 # my-minimal-playground
 
-공개 블로그: [Kafka 첫 실습 — 로그·오프셋·커밋 이해하기](https://blog.baekchan.com/post/kafka-첫-실습-읽은-메시지는-사라질까-로그오프셋커밋-이해하기)
+개념과 상세 해설은 **[개발 블로그의 Kafka 연재](https://blog.baekchan.com/category/kafka)**에서 읽을 수 있습니다.
 
 블로그의 설명을 직접 실행하고, 조건을 바꾸며 확인하는 공개 학습 저장소입니다.
+글 전문은 블로그에 발행하고, 이 저장소에는 실행 코드·실습 문제·실행 후 해설·검증 기록을 제공합니다.
 한 회차의 코드와 글을 완성한 뒤 실습하고, 원리를 설명할 수 있게 되면 다음 회차로 넘어갑니다.
 
 | 회차 | 주제 | 실행 안내 | 글 |
 |---|---|---|---|
-| Kafka 01 | 로그·오프셋·커밋·재소비 | [실습 README](kafka/01-log-and-offset/README.md) | [상세 해설](kafka/01-log-and-offset/ARTICLE.md) |
-| Kafka 02 | 파티션·키·Consumer Group·재할당 | [실습 README](kafka/02-partitions-and-groups/README.md) | [상세 해설](kafka/02-partitions-and-groups/ARTICLE.md) |
+| Kafka 01 | 로그·오프셋·커밋·재소비 | [실습 README](kafka/01-log-and-offset/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-첫-실습-읽은-메시지는-사라질까-로그오프셋커밋-이해하기) |
+| Kafka 02 | 파티션·키·Consumer Group·재할당 | [실습 README](kafka/02-partitions-and-groups/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-consumer를-늘리면-더-빨라질까-파티션키consumer-group-이해하기) |
+
+position·seek·commit·ack의 관계는 [보충 글](https://blog.baekchan.com/post/kafka의-positionseekcommitack-읽은-위치와-처리-완료는-어떻게-다를까)에서 이어서 설명합니다.
 
 Kafka 02는 `./play-kafka-02` 또는 Mac의 `Kafka-02.command`로 시작합니다.
-`./play-kafka-02 verify`는 7단계 실험을 자동 실행합니다. 고정 버전은 `kafka-02-v1`입니다.
+`./play-kafka-02 verify`는 7단계 실험을 자동 실행합니다. 고정 버전은 `kafka-02-v1.1`입니다.
 기존 `./play`와 `Kafka-01.command`는 Kafka 01을 그대로 실행합니다.
 
 ## 가장 쉬운 실행 (Mac)
@@ -37,7 +40,7 @@ Gradle Wrapper가 포함되어 있습니다. Docker·별도 Kafka·DB 설치는 
 ```bash
 git clone https://github.com/BaekChan1024/my-minimal-playground.git
 cd my-minimal-playground
-git checkout kafka-01-v1.1
+git switch --detach kafka-02-v1.1
 ./play
 ```
 

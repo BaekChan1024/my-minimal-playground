@@ -3,7 +3,7 @@
 Consumer를 1→2→3→4개로 늘려 파티션 3개의 담당자가 어떻게 바뀌는지 관찰합니다.
 실제 Kafka를 사용하며, 숫자를 미리 정해 출력하는 시뮬레이터가 아닙니다.
 
-- [상세 글](ARTICLE.md)
+- [블로그에서 상세 글 읽기 →](https://blog.baekchan.com/post/kafka-consumer를-늘리면-더-빨라질까-파티션키consumer-group-이해하기)
 - [실행 전 예상](EXERCISES.md)
 - [실행 후 해설](ANSWERS.md)
 - [검증 기록](VERIFICATION.md)
@@ -27,8 +27,8 @@ Windows의 대응 명령은 아래와 같으며, Windows 실행 검증은 하지
 gradlew.bat :kafka:02-partitions-and-groups:run --args=guided --console=plain
 ```
 
-고정 태그 `kafka-02-v1`을 사용합니다. 기존 저장소에 수정 중인 파일이 있다면 보존하세요.
-이미 예전 태그에 머물러 있다면 원격 태그를 받아 `kafka-02-v1`을 선택해야 새 도구가 보입니다.
+고정 태그 `kafka-02-v1.1`을 사용합니다. 기존 저장소에 수정 중인 파일이 있다면 보존하세요.
+이미 예전 태그에 머물러 있다면 원격 태그를 받아 `kafka-02-v1.1`을 선택해야 새 도구가 보입니다.
 
 ## 일곱 단계
 

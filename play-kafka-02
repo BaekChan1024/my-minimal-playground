@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+set -euo pipefail
+project_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+cd "$project_dir"
+mode="${1:-guided}"
+if [[ $# -gt 1 || ( "$mode" != guided && "$mode" != verify ) ]]; then
+    printf 'Usage: ./play-kafka-02 [guided|verify]\n' >&2
+    exit 2
+fi
+# Prefer an installed JDK 21; no downloads or system settings changes here.
+if [[ "$(uname -s)" == Darwin && -x /usr/libexec/java_home ]]; then
+    if detected_jdk=$(/usr/libexec/java_home -v 21 2>/dev/null); then
+        export JAVA_HOME="$detected_jdk"
+    fi
+fi
+
+if [[ -n "${JAVA_HOME:-}" && -x "$JAVA_HOME/bin/java" ]]; then
+    java_cmd="$JAVA_HOME/bin/java"
+elif command -v java >/dev/null 2>&1; then
+    java_cmd="$(command -v java)"
+else
+    printf 'JDK 21이 필요합니다. 설치 후 다시 실행하세요: https://adoptium.net/temurin/releases/?version=21\n' >&2
+    exit 1
+fi
+
+if ! java_info=$("$java_cmd" -version 2>&1); then
+    printf 'Java를 실행할 수 없습니다. JDK 21 설치와 JAVA_HOME 설정을 확인하세요.\n' >&2
+    exit 1
+fi
+if [[ ! "$java_info" =~ version\ \"21([.\"]|-) ]]; then
+    printf '이 실행 도구는 JDK 21을 사용합니다. JDK 21 설치와 JAVA_HOME 설정을 확인하세요.\n' >&2
+    exit 1
+fi
+
+
+if [[ "$mode" == verify ]]; then
+    exec ./gradlew :kafka:02-partitions-and-groups:verifyLab --console=plain --quiet
+fi
+exec ./gradlew :kafka:02-partitions-and-groups:run --args=guided --console=plain --quiet

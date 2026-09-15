@@ -1,2 +1,3 @@
 rootProject.name = 'my-minimal-playground'
 include 'kafka:01-log-and-offset'
+include 'kafka:02-partitions-and-groups'

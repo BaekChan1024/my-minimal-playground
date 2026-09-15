@@ -8,6 +8,11 @@
 | 회차 | 주제 | 실행 안내 | 글 |
 |---|---|---|---|
 | Kafka 01 | 로그·오프셋·커밋·재소비 | [실습 README](kafka/01-log-and-offset/README.md) | [상세 해설](kafka/01-log-and-offset/ARTICLE.md) |
+| Kafka 02 | 파티션·키·Consumer Group·재할당 | [실습 README](kafka/02-partitions-and-groups/README.md) | [상세 해설](kafka/02-partitions-and-groups/ARTICLE.md) |
+
+Kafka 02는 `./play-kafka-02` 또는 Mac의 `Kafka-02.command`로 시작합니다.
+`./play-kafka-02 verify`는 7단계 실험을 자동 실행합니다. 고정 버전은 `kafka-02-v1`입니다.
+기존 `./play`와 `Kafka-01.command`는 Kafka 01을 그대로 실행합니다.
 
 ## 가장 쉬운 실행 (Mac)
 

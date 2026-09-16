@@ -10,6 +10,9 @@
 |---|---|---|---|
 | Kafka 01 | 로그·오프셋·커밋·재소비 | [실습 README](kafka/01-log-and-offset/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-첫-실습-읽은-메시지는-사라질까-로그오프셋커밋-이해하기) |
 | Kafka 02 | 파티션·키·Consumer Group·재할당 | [실습 README](kafka/02-partitions-and-groups/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-consumer를-늘리면-더-빨라질까-파티션키consumer-group-이해하기) |
+| Kafka 03 | poll 제한·재전달·뒤늦은 커밋 거절 | [실습 README](kafka/03-poll-timeout-and-commit/README.md) | [Kafka 연재](https://blog.baekchan.com/category/kafka) — 새 글 발행 준비 중 |
+
+Kafka 03은 `./play-kafka-03` 또는 `Kafka-03.command`로 실행합니다. 자동 검증은 `./play-kafka-03 verify`, 고정 버전은 `kafka-03-v1`입니다.
 
 position·seek·commit·ack의 관계는 [보충 글](https://blog.baekchan.com/post/kafka의-positionseekcommitack-읽은-위치와-처리-완료는-어떻게-다를까)에서 이어서 설명합니다.
 

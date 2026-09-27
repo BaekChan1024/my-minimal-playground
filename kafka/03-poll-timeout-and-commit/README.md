@@ -1,6 +1,6 @@
 # Kafka 03 — poll 제한과 커밋 경계
 
-상세 기고문은 [블로그 Kafka 연재](https://blog.baekchan.com/category/kafka)에 발행합니다. 현재 글은 발행 준비 중입니다.
+상세 기고문: [Kafka 처리를 끝냈는데 왜 다시 읽힐까? poll 제한·리밸런스·커밋 경계](https://blog.baekchan.com/post/kafka-처리를-끝냈는데-왜-다시-읽힐까-poll-제한리밸런스커밋-경계)
 
 실제 임시 Kafka에서 Consumer A가 레코드를 읽고 효과를 반영한 뒤 poll을 중단합니다. 같은 그룹의 B가 파티션을 인계받으면 재전달 여부와 A의 뒤늦은 커밋 결과를 비교합니다.
 

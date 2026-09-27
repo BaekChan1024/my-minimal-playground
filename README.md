@@ -10,7 +10,7 @@
 |---|---|---|---|
 | Kafka 01 | 로그·오프셋·커밋·재소비 | [실습 README](kafka/01-log-and-offset/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-첫-실습-읽은-메시지는-사라질까-로그오프셋커밋-이해하기) |
 | Kafka 02 | 파티션·키·Consumer Group·재할당 | [실습 README](kafka/02-partitions-and-groups/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-consumer를-늘리면-더-빨라질까-파티션키consumer-group-이해하기) |
-| Kafka 03 | poll 제한·재전달·뒤늦은 커밋 거절 | [실습 README](kafka/03-poll-timeout-and-commit/README.md) | [Kafka 연재](https://blog.baekchan.com/category/kafka) — 새 글 발행 준비 중 |
+| Kafka 03 | poll 제한·재전달·뒤늦은 커밋 거절 | [실습 README](kafka/03-poll-timeout-and-commit/README.md) | [블로그 글](https://blog.baekchan.com/post/kafka-처리를-끝냈는데-왜-다시-읽힐까-poll-제한리밸런스커밋-경계) |
 
 Kafka 03은 `./play-kafka-03` 또는 `Kafka-03.command`로 실행합니다. 자동 검증은 `./play-kafka-03 verify`, 고정 버전은 `kafka-03-v1`입니다.
 

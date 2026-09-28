@@ -13,6 +13,7 @@
 | Kafka 03 | poll 제한·재전달·뒤늦은 커밋 거절 | [실습 README](kafka/03-poll-timeout-and-commit/README.md) | [블로그 글](https://blog.baekchan.com/post/kafka-처리를-끝냈는데-왜-다시-읽힐까-poll-제한리밸런스커밋-경계) |
 | Kafka 04 | 트랜잭션·읽기 격리·abort·중복 send | [실습 README](kafka/04-transactions-and-visibility/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-트랜잭션이-롤백하는-것은-어디까지일까-abortreadcommittedlso) |
 | Kafka 05 | 입력 오프셋·출력의 트랜잭션 결합 | [실습 README](kafka/05-offsets-in-transaction/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-입력-오프셋과-출력-메시지를-함께-커밋하기-sendoffsetstotransaction-실습) |
+| Kafka 06 | transactional.id·Producer fencing·소유자 인계 | [실습 README](kafka/06-producer-fencing/README.md) | [Kafka 연재](https://blog.baekchan.com/category/kafka) — 발행 준비 중 |
 
 Kafka 03은 `./play-kafka-03` 또는 `Kafka-03.command`로 실행합니다. 자동 검증은 `./play-kafka-03 verify`, 고정 버전은 `kafka-03-v1`입니다.
 
@@ -79,3 +80,5 @@ quit
 공유 서버 접속 정보나 비밀값은 필요 없습니다.
 
 `kafka-01-v1` 태그는 최초 글의 명령어 실습을 그대로 보존합니다. 쉬운 실행 도구는 `kafka-01-v1.1`부터 포함됩니다.
+
+Kafka 06은 `./play-kafka-06` 또는 `Kafka-06.command`로 실행합니다. 자동 검증은 `./play-kafka-06 verify`, 고정 버전은 `kafka-06-v1`입니다.

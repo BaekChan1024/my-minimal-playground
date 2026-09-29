@@ -15,6 +15,8 @@
 | Kafka 05 | 입력 오프셋·출력의 트랜잭션 결합 | [실습 README](kafka/05-offsets-in-transaction/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-입력-오프셋과-출력-메시지를-함께-커밋하기-sendoffsetstotransaction-실습) |
 | Kafka 06 | transactional.id·Producer fencing·소유자 인계 | [실습 README](kafka/06-producer-fencing/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-새-producer가-시작되면-이전-producer는-어떻게-될까-transactionalid와-fencing) |
 
+| Kafka 07 | Kafka 전송 성공은 어디까지 안전할까? 복제·ISR·acks 실습 | [실습 README](kafka/07-replication-isr/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-전송-성공은-어디까지-안전할까-복제isracks-실습) |
+
 Kafka 03은 `./play-kafka-03` 또는 `Kafka-03.command`로 실행합니다. 자동 검증은 `./play-kafka-03 verify`, 고정 버전은 `kafka-03-v1`입니다.
 
 Kafka 04는 `./play-kafka-04` 또는 `Kafka-04.command`로 실행합니다. 자동 검증은 `./play-kafka-04 verify`, 고정 버전은 `kafka-04-v1`입니다.

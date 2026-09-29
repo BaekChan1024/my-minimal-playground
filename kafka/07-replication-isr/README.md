@@ -1,6 +1,6 @@
 # Kafka 07 — 복제·ISR·acks
 
-상세 글: [Kafka 연재](https://blog.baekchan.com/category/kafka) (발행 후 직접 링크 연결)
+상세 글: [Kafka 연재](https://blog.baekchan.com/post/kafka-전송-성공은-어디까지-안전할까-복제isracks-실습)
 
 JDK 21과 Git이 필요합니다. Docker나 외부 Kafka 없이 임시 브로커 3개와 별도 컨트롤러 1개를 실행합니다. 힙 상한 1GiB 외에도 JVM 메모리가 필요합니다. 처음에는 의존성을 다운로드합니다.
 

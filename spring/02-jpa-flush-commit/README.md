@@ -1,6 +1,6 @@
 # Spring 02 — JPA save·flush·commit
 
-상세 글: [Spring 연재](https://blog.baekchan.com/category/spring)
+상세 글: [Spring 연재](https://blog.baekchan.com/post/jpa-save와-flush는-언제-저장될까-sql-실행커밋실패-시점-이해하기)
 
 JDK 21과 Git이 필요합니다. 실제 Spring Data JPA 4.0.1, Hibernate 7.2.0.Final, Spring Framework 7.0.2, 임시 PostgreSQL 18.4를 사용합니다. Docker나 기존 DB 설정은 필요 없습니다. 최초 실행 때 Maven Central에서 의존성과 PostgreSQL 바이너리를 받습니다. 임시 서버는 loopback 임의 포트만 사용하고 종료 시 정리합니다. 운영 설정과 자격증명을 읽지 않습니다.
 

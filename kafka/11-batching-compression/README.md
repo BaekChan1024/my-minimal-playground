@@ -1,6 +1,6 @@
 # Kafka 11 — batching·linger·gzip
 
-상세 글: [Kafka 연재](https://blog.baekchan.com/category/kafka) (발행 후 직접 링크 연결)
+상세 글: [Kafka 연재](https://blog.baekchan.com/post/kafka-전송은-무엇을-기다릴까-batchlinger압축과-지연-측정)
 
 JDK21과 Git. 실제 임시 브로커1·컨트롤러1을 실행하며 별도 Kafka/DB/Docker는 필요 없습니다. 순차 linger=20 조건 때문에 수십 초 이상 걸립니다.
 

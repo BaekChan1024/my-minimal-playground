@@ -1,10 +1,12 @@
 # my-minimal-playground
 
-개념과 상세 해설은 **[개발 블로그의 Kafka 연재](https://blog.baekchan.com/category/kafka)**에서 읽을 수 있습니다.
+개념과 상세 해설은 **[개발 블로그](https://blog.baekchan.com)**의 [Kafka](https://blog.baekchan.com/category/kafka)·[Spring](https://blog.baekchan.com/category/spring) 연재에서 읽을 수 있습니다.
 
 블로그의 설명을 직접 실행하고, 조건을 바꾸며 확인하는 공개 학습 저장소입니다.
 글 전문은 블로그에 발행하고, 이 저장소에는 실행 코드·실습 문제·실행 후 해설·검증 기록을 제공합니다.
 한 회차의 코드와 글을 완성한 뒤 실습하고, 원리를 설명할 수 있게 되면 다음 회차로 넘어갑니다.
+
+## Kafka 실습
 
 | 회차 | 주제 | 실행 안내 | 글 |
 |---|---|---|---|
@@ -35,7 +37,15 @@ Kafka 02는 `./play-kafka-02` 또는 Mac의 `Kafka-02.command`로 시작합니�
 `./play-kafka-02 verify`는 7단계 실험을 자동 실행합니다. 고정 버전은 `kafka-02-v1.1`입니다.
 기존 `./play`와 `Kafka-01.command`는 Kafka 01을 그대로 실행합니다.
 
-## 가장 쉬운 실행 (Mac)
+## Spring 실습
+
+| 회차 | 주제 | 실행 안내 | 글 |
+|---|---|---|---|
+| Spring 01 | 트랜잭션 프록시·롤백 규칙·전파 | [실습 README](spring/01-transaction-boundaries/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/spring-transactional은-언제-롤백할까-프록시예외전파를-db로-확인하기) |
+
+`./play-spring-01` 또는 Mac의 `Spring-01.command`로 시작합니다. 고정 버전은 `spring-tx-01-v1`이며 실제 임시 PostgreSQL을 사용합니다.
+
+## 가장 쉬운 실행 (Mac · Kafka 01)
 
 저장소 폴더에서 **`Kafka-01.command`를 더블클릭**하고 `1`을 선택하세요.
 설치된 JDK 21을 자동으로 찾으며, 읽을 개수를 선택한 다음 Enter로 6단계 실습을 진행합니다.

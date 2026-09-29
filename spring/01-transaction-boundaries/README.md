@@ -1,6 +1,6 @@
 # Spring 01 — 트랜잭션 호출·예외·전파 경계
 
-상세 글: [Spring 연재](https://blog.baekchan.com/category/spring) (발행 후 직접 링크 연결)
+상세 글: [Spring 연재](https://blog.baekchan.com/post/spring-transactional은-언제-롤백할까-프록시예외전파를-db로-확인하기)
 
 JDK 21과 Git이 필요합니다. 실제 임시 PostgreSQL 18.4와 Spring Framework 7.0.2를 사용합니다. Docker나 기존 DB는 필요 없습니다. 최초 실행 때 Maven Central에서 의존성과 실습용 PostgreSQL 바이너리를 받습니다. 임시 서버는 loopback 임의 포트만 사용하며 종료 시 정리합니다. 운영 설정·자격증명을 읽지 않습니다.
 

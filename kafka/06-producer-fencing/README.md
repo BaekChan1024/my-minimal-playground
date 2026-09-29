@@ -1,6 +1,6 @@
 # Kafka 06 — transactional.id와 Producer fencing
 
-상세 글은 [블로그 Kafka 연재](https://blog.baekchan.com/category/kafka)에 발행 준비 중입니다. 이 저장소에는 실행 코드·문제·해설·검증만 둡니다.
+상세 글은 [블로그에서 읽을 수 있습니다](https://blog.baekchan.com/post/kafka-새-producer가-시작되면-이전-producer는-어떻게-될까-transactionalid와-fencing). 이 저장소에는 실행 코드·문제·해설·검증만 둡니다.
 
 ## 실행
 

@@ -1,6 +1,6 @@
 # Spring 05 — OFFSET·keyset 페이지 경계
 
-[상세 글](https://blog.baekchan.com/category/spring)
+[상세 글](https://blog.baekchan.com/post/cursor가-있는데-글이-중복될까-offsetkeyset페이지-경계-실습)
 
 JDK21과 Git 필요. Spring7.0.2 / PostgreSQL18.4 / JDBC42.7.10. Docker·운영 연결 불필요. 첫 실행에 Maven 의존성과 DB 바이너리 다운로드, loopback 임의 포트에서 임시 DB를 실행하고 종료 시 정리합니다. macOS ARM64 검증, 다른 OS 미검증.
 

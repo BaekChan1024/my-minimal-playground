@@ -45,8 +45,9 @@ Kafka 02는 `./play-kafka-02` 또는 Mac의 `Kafka-02.command`로 시작합니�
 | Spring 02 | JPA save·flush·commit·실패 시점 | [실습 README](spring/02-jpa-flush-commit/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/jpa-save와-flush는-언제-저장될까-sql-실행커밋실패-시점-이해하기) |
 | Spring 03 | 동시 수정·낙관적 잠금·편집 버전 충돌 | [실습 README](spring/03-concurrent-editing/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/같은-글을-두-사람이-수정하면-jpa-낙관적-잠금버전-충돌행-잠금-실습) |
 | Spring 04 | 조회 일관성·격리 수준·JPA 1차 캐시 | [실습 README](spring/04-read-consistency/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/같은-트랜잭션인데-조회-값이-다를까-readonly격리-수준jpa-1차-캐시) |
+| Spring 05 | OFFSET·Keyset·페이지 경계 | [실습 README](spring/05-pagination/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/cursor가-있는데-글이-중복될까-offsetkeyset페이지-경계-실습) |
 
-`./play-spring-01` 또는 Mac의 `Spring-01.command`로 시작합니다. 고정 버전은 `spring-tx-01-v1`이며 실제 임시 PostgreSQL을 사용합니다. Spring 02는 `./play-spring-02` 또는 `Spring-02.command`, 고정 버전 `spring-tx-02-v1`로 실행합니다. Spring 03은 `./play-spring-03` 또는 `Spring-03.command`, 고정 버전 `spring-tx-03-v1`입니다. Spring 04는 `./play-spring-04` 또는 `Spring-04.command`, 고정 버전 `spring-tx-04-v1`입니다.
+`./play-spring-01` 또는 Mac의 `Spring-01.command`로 시작합니다. 고정 버전은 `spring-tx-01-v1`이며 실제 임시 PostgreSQL을 사용합니다. Spring 02는 `./play-spring-02` 또는 `Spring-02.command`, 고정 버전 `spring-tx-02-v1`로 실행합니다. Spring 03은 `./play-spring-03` 또는 `Spring-03.command`, 고정 버전 `spring-tx-03-v1`입니다. Spring 04는 `./play-spring-04` 또는 `Spring-04.command`, 고정 버전 `spring-tx-04-v1`입니다. Spring 05는 `./play-spring-05` 또는 `Spring-05.command`, 고정 버전 `spring-tx-05-v1`입니다.
 
 ## 가장 쉬운 실행 (Mac · Kafka 01)
 

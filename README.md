@@ -107,3 +107,5 @@ Kafka 06은 `./play-kafka-06` 또는 `Kafka-06.command`로 실행합니다. 자�
 - [04 저장·전달·중복 처리](outbox/04-end-to-end) · [블로그](https://blog.baekchan.com/post/아웃박스-기초-4-글-저장부터-kafka와-inbox까지-직접-따라가기) · `./play-outbox-04`
 
 - [05 순서·버전·삭제](outbox/05-order-and-version) · [블로그](https://blog.baekchan.com/post/아웃박스-기초-5-중복은-막았는데-글이-과거로-돌아간다면) · `./play-outbox-05`
+
+- [06 릴레이 동시 실행](outbox/06-competing-relays) · [블로그](https://blog.baekchan.com/post/아웃박스-기초-6-릴레이를-두-개-실행하면-어떻게-될까) · `./play-outbox-06`

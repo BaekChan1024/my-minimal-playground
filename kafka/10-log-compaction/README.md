@@ -1,6 +1,6 @@
 # Kafka 10 — Log Compaction과 tombstone
 
-상세 글: [Kafka 연재](https://blog.baekchan.com/category/kafka) (발행 후 직접 링크 연결)
+상세 글: [Kafka 연재](https://blog.baekchan.com/post/kafka는-같은-key의-과거-값을-언제-지울까-log-compactiontombstone-실습)
 
 JDK 21과 Git. 실제 임시 브로커 1개·컨트롤러 1개를 사용합니다. 외부 Kafka/DB/Docker는 필요 없습니다. 최초 의존성 다운로드와 Cleaner 대기에 수십 초 걸릴 수 있습니다.
 

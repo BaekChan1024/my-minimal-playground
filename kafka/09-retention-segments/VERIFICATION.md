@@ -1,4 +1,4 @@
-# 検증 — 2026-09-29
+# 검증 — 2026-09-29
 
 macOS ARM64 / JDK21 / Gradle9.2.1 / Kafka4.1.1 / metadata4.1-IV1. 자동 verify와 저장소 밖 Mac 안내 실행 종료0. 약600KB 레코드9개, old timestamp=현재-1시간, fresh=현재, 1MiB 세그먼트, retention=-1→600000ms. 그룹 오프셋은 Admin으로0, Consumer는 assign/seek.
 

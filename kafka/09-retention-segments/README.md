@@ -1,6 +1,6 @@
 # Kafka 09 — 로그 세그먼트와 retention
 
-상세 글: [Kafka 연재](https://blog.baekchan.com/category/kafka) (발행 후 직접 링크 연결)
+상세 글: [Kafka 연재](https://blog.baekchan.com/post/kafka-메시지는-언제-삭제될까-로그-세그먼트retention사라진-오프셋)
 
 JDK 21과 Git. 로컬 임시 브로커 1개·컨트롤러 1개이며 외부 Kafka/DB/Docker가 필요 없습니다. 최초 의존성 다운로드와 백그라운드 정리 대기로 수십 초 걸립니다.
 

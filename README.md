@@ -19,6 +19,8 @@
 
 | Kafka 08 | Kafka 재시도는 어디까지 중복을 막을까? 멱등 전송·업무 중복·순서 | [실습 README](kafka/08-idempotence-retries/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-재시도는-어디까지-중복을-막을까-멱등-전송업무-중복순서) |
 
+| Kafka 09 | Kafka 메시지는 언제 삭제될까? 로그 세그먼트·retention·사라진 오프셋 | [실습 README](kafka/09-retention-segments/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-메시지는-언제-삭제될까-로그-세그먼트retention사라진-오프셋) |
+
 Kafka 03은 `./play-kafka-03` 또는 `Kafka-03.command`로 실행합니다. 자동 검증은 `./play-kafka-03 verify`, 고정 버전은 `kafka-03-v1`입니다.
 
 Kafka 04는 `./play-kafka-04` 또는 `Kafka-04.command`로 실행합니다. 자동 검증은 `./play-kafka-04 verify`, 고정 버전은 `kafka-04-v1`입니다.

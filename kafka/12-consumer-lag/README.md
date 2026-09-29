@@ -1,6 +1,6 @@
 # Kafka 12 — Consumer lag와 처리 병목
 
-상세 글: [Kafka 연재](https://blog.baekchan.com/category/kafka) (발행 후 직접 링크 연결)
+상세 글: [Kafka 연재](https://blog.baekchan.com/post/kafka-lag가-늘면-consumer부터-늘릴까-처리율파티션-쏠림커밋-진단)
 
 JDK21과 Git. 실제 임시 브로커1·컨트롤러1이며 외부 Kafka/DB/Docker는 필요 없습니다. 그룹 합류와 여섯 비교를 위해 수십 초 걸릴 수 있습니다.
 

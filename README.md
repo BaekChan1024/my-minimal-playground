@@ -25,6 +25,8 @@
 
 | Kafka 11 | Kafka 전송은 무엇을 기다릴까? batch·linger·압축과 지연 측정 | [실습 README](kafka/11-batching-compression/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-전송은-무엇을-기다릴까-batchlinger압축과-지연-측정) |
 
+| Kafka 12 | Kafka lag가 늘면 Consumer부터 늘릴까? 처리율·파티션 쏠림·커밋 진단 | [실습 README](kafka/12-consumer-lag/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-lag가-늘면-consumer부터-늘릴까-처리율파티션-쏠림커밋-진단) |
+
 Kafka 03은 `./play-kafka-03` 또는 `Kafka-03.command`로 실행합니다. 자동 검증은 `./play-kafka-03 verify`, 고정 버전은 `kafka-03-v1`입니다.
 
 Kafka 04는 `./play-kafka-04` 또는 `Kafka-04.command`로 실행합니다. 자동 검증은 `./play-kafka-04 verify`, 고정 버전은 `kafka-04-v1`입니다.

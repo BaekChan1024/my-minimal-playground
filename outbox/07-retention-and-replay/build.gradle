@@ -1,0 +1,27 @@
+plugins { id 'application' }
+repositories { mavenCentral() }
+java { toolchain { languageVersion = JavaLanguageVersion.of(21) } }
+dependencies {
+    implementation platform('org.springframework.boot:spring-boot-dependencies:4.0.1')
+    implementation 'org.springframework.kafka:spring-kafka-test:4.0.1'
+    implementation 'org.apache.kafka:kafka-clients:4.1.1'
+    implementation 'org.springframework:spring-context'
+    implementation 'org.springframework:spring-jdbc'
+    implementation 'org.springframework:spring-tx'
+    implementation 'io.zonky.test:embedded-postgres:2.2.2'
+    implementation enforcedPlatform('io.zonky.test.postgres:embedded-postgres-binaries-bom:18.4.0')
+    runtimeOnly 'ch.qos.logback:logback-classic'
+    runtimeOnly 'io.zonky.test.postgres:embedded-postgres-binaries-darwin-arm64v8'
+}
+dependencyLocking { lockAllConfigurations() }
+application { mainClass = 'playground.outbox.RetentionLab' }
+tasks.named('run', JavaExec) { standardInput = System.in; maxHeapSize = '1024m' }
+tasks.register('verifyLab', JavaExec) {
+    group = 'verification'
+    description = 'Verify Outbox cleanup, Inbox expiry and replay boundaries.'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = application.mainClass
+    args 'verify'
+    maxHeapSize = '1024m'
+}
+tasks.named('check') { dependsOn 'verifyLab' }

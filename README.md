@@ -101,3 +101,7 @@ quit
 `kafka-01-v1` 태그는 최초 글의 명령어 실습을 그대로 보존합니다. 쉬운 실행 도구는 `kafka-01-v1.1`부터 포함됩니다.
 
 Kafka 06은 `./play-kafka-06` 또는 `Kafka-06.command`로 실행합니다. 자동 검증은 `./play-kafka-06 verify`, 고정 버전은 `kafka-06-v1`입니다.
+
+## Outbox 기초 실습
+
+- [04 저장·전달·중복 처리](outbox/04-end-to-end) · [블로그](https://blog.baekchan.com/post/아웃박스-기초-4-글-저장부터-kafka와-inbox까지-직접-따라가기) · `./play-outbox-04`

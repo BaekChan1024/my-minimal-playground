@@ -1,6 +1,6 @@
 # Spring 04 — 조회 일관성·격리 수준·JPA 1차 캐시
 
-상세 글: [Spring 연재](https://blog.baekchan.com/category/spring)
+상세 글: [Spring 연재](https://blog.baekchan.com/post/같은-트랜잭션인데-조회-값이-다를까-readonly격리-수준jpa-1차-캐시)
 
 JDK21과 Git이 필요합니다. Spring7.0.2 / Hibernate7.2.0.Final / PostgreSQL18.4를 실제 실행합니다. Docker나 기존 DB는 필요 없습니다. 첫 실행 시 Maven Central에서 의존성과 임시 PostgreSQL 바이너리를 받습니다. loopback 임의 포트로만 열고 종료 시 정리합니다. macOS ARM64에서 검증했으며 다른 OS는 미검증입니다.
 

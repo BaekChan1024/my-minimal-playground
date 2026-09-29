@@ -14,18 +14,14 @@
 | Kafka 04 | 트랜잭션·읽기 격리·abort·중복 send | [실습 README](kafka/04-transactions-and-visibility/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-트랜잭션이-롤백하는-것은-어디까지일까-abortreadcommittedlso) |
 | Kafka 05 | 입력 오프셋·출력의 트랜잭션 결합 | [실습 README](kafka/05-offsets-in-transaction/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-입력-오프셋과-출력-메시지를-함께-커밋하기-sendoffsetstotransaction-실습) |
 | Kafka 06 | transactional.id·Producer fencing·소유자 인계 | [실습 README](kafka/06-producer-fencing/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-새-producer가-시작되면-이전-producer는-어떻게-될까-transactionalid와-fencing) |
-
 | Kafka 07 | Kafka 전송 성공은 어디까지 안전할까? 복제·ISR·acks 실습 | [실습 README](kafka/07-replication-isr/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-전송-성공은-어디까지-안전할까-복제isracks-실습) |
-
 | Kafka 08 | Kafka 재시도는 어디까지 중복을 막을까? 멱등 전송·업무 중복·순서 | [실습 README](kafka/08-idempotence-retries/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-재시도는-어디까지-중복을-막을까-멱등-전송업무-중복순서) |
-
 | Kafka 09 | Kafka 메시지는 언제 삭제될까? 로그 세그먼트·retention·사라진 오프셋 | [실습 README](kafka/09-retention-segments/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-메시지는-언제-삭제될까-로그-세그먼트retention사라진-오프셋) |
-
 | Kafka 10 | Kafka는 같은 key의 과거 값을 언제 지울까? Log Compaction·tombstone 실습 | [실습 README](kafka/10-log-compaction/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka는-같은-key의-과거-값을-언제-지울까-log-compactiontombstone-실습) |
-
 | Kafka 11 | Kafka 전송은 무엇을 기다릴까? batch·linger·압축과 지연 측정 | [실습 README](kafka/11-batching-compression/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-전송은-무엇을-기다릴까-batchlinger압축과-지연-측정) |
-
 | Kafka 12 | Kafka lag가 늘면 Consumer부터 늘릴까? 처리율·파티션 쏠림·커밋 진단 | [실습 README](kafka/12-consumer-lag/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-lag가-늘면-consumer부터-늘릴까-처리율파티션-쏠림커밋-진단) |
+
+Kafka 06~12는 각 회차의 `./play-kafka-NN` 또는 Mac의 `Kafka-NN.command`로 실행합니다. 예: `./play-kafka-12`. 자동 검증은 뒤에 `verify`를 붙이며, 각 고정 버전은 `kafka-NN-v1`입니다. 회차별 준비물·예상 질문·관측 결과는 위 실습 README에서 확인하세요.
 
 Kafka 03은 `./play-kafka-03` 또는 `Kafka-03.command`로 실행합니다. 자동 검증은 `./play-kafka-03 verify`, 고정 버전은 `kafka-03-v1`입니다.
 

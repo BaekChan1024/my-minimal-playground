@@ -17,6 +17,8 @@
 
 | Kafka 07 | Kafka 전송 성공은 어디까지 안전할까? 복제·ISR·acks 실습 | [실습 README](kafka/07-replication-isr/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-전송-성공은-어디까지-안전할까-복제isracks-실습) |
 
+| Kafka 08 | Kafka 재시도는 어디까지 중복을 막을까? 멱등 전송·업무 중복·순서 | [실습 README](kafka/08-idempotence-retries/README.md) | [블로그에서 읽기](https://blog.baekchan.com/post/kafka-재시도는-어디까지-중복을-막을까-멱등-전송업무-중복순서) |
+
 Kafka 03은 `./play-kafka-03` 또는 `Kafka-03.command`로 실행합니다. 자동 검증은 `./play-kafka-03 verify`, 고정 버전은 `kafka-03-v1`입니다.
 
 Kafka 04는 `./play-kafka-04` 또는 `Kafka-04.command`로 실행합니다. 자동 검증은 `./play-kafka-04 verify`, 고정 버전은 `kafka-04-v1`입니다.

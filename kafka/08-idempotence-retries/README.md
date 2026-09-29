@@ -1,6 +1,6 @@
 # Kafka 08 — 재시도와 멱등 전송
 
-상세 글: [Kafka 연재](https://blog.baekchan.com/category/kafka) (발행 후 직접 링크 연결)
+상세 글: [Kafka 연재](https://blog.baekchan.com/post/kafka-재시도는-어디까지-중복을-막을까-멱등-전송업무-중복순서)
 
 JDK 21과 Git. 임시 로컬 브로커 2개·컨트롤러 1개, Docker/운영 접속 없음. 최초 의존성 다운로드가 필요하고 힙 상한은 1GiB입니다.
 

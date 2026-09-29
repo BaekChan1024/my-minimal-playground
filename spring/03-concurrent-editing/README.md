@@ -1,6 +1,6 @@
 # Spring 03 — 동시 수정과 오래된 편집본
 
-상세 글: [Spring 연재](https://blog.baekchan.com/category/spring)
+상세 글: [Spring 연재](https://blog.baekchan.com/post/같은-글을-두-사람이-수정하면-jpa-낙관적-잠금버전-충돌행-잠금-실습)
 
 JDK 21과 Git이 필요합니다. Spring Framework 7.0.2 / Hibernate 7.2.0.Final / 임시 PostgreSQL 18.4를 실행합니다. Docker와 기존 DB 접속 정보는 필요 없습니다. 최초 실행 때 Maven Central에서 의존성과 PostgreSQL 바이너리를 받습니다. loopback 임의 포트만 사용하고 종료 시 정리합니다. macOS ARM64에서 검증했으며 다른 OS는 미검증입니다.
 

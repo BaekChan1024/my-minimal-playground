@@ -49,6 +49,10 @@ Kafka 02는 `./play-kafka-02` 또는 Mac의 `Kafka-02.command`로 시작합니�
 
 `./play-spring-01` 또는 Mac의 `Spring-01.command`로 시작합니다. 고정 버전은 `spring-tx-01-v1`이며 실제 임시 PostgreSQL을 사용합니다. Spring 02는 `./play-spring-02` 또는 `Spring-02.command`, 고정 버전 `spring-tx-02-v1`로 실행합니다. Spring 03은 `./play-spring-03` 또는 `Spring-03.command`, 고정 버전 `spring-tx-03-v1`입니다. Spring 04는 `./play-spring-04` 또는 `Spring-04.command`, 고정 버전 `spring-tx-04-v1`입니다. Spring 05는 `./play-spring-05` 또는 `Spring-05.command`, 고정 버전 `spring-tx-05-v1`입니다.
 
+## 서비스 복구 실습
+
+[전환 후 데이터 복구 실습](operations/01-cutover-recovery/README.md)은 새 글·수정·삭제·파일·복구 후 다음 쓰기를 확인합니다. `./play-recovery-01` 또는 Mac의 `Recovery-01.command`로 실행하고, 고정 버전은 `recovery-01-v1`입니다. 설명 글은 [개발 블로그](https://blog.baekchan.com)에 발행 준비 중입니다.
+
 ## 가장 쉬운 실행 (Mac · Kafka 01)
 
 저장소 폴더에서 **`Kafka-01.command`를 더블클릭**하고 `1`을 선택하세요.

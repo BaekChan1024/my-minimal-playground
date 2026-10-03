@@ -51,7 +51,7 @@ Kafka 02는 `./play-kafka-02` 또는 Mac의 `Kafka-02.command`로 시작합니�
 
 ## 서비스 복구 실습
 
-[전환 후 데이터 복구 실습](operations/01-cutover-recovery/README.md)은 새 글·수정·삭제·파일·복구 후 다음 쓰기를 확인합니다. `./play-recovery-01` 또는 Mac의 `Recovery-01.command`로 실행하고, 고정 버전은 `recovery-01-v1`입니다. 설명 글은 [개발 블로그](https://blog.baekchan.com)에 발행 준비 중입니다.
+[전환 후 데이터 복구 실습](operations/01-cutover-recovery/README.md)은 새 글·수정·삭제·파일·복구 후 다음 쓰기를 확인합니다. `./play-recovery-01` 또는 Mac의 `Recovery-01.command`로 실행하고, 고정 버전은 `recovery-01-v1`입니다. 설명은 [블로그 글](https://blog.baekchan.com/post/서비스-전환-후-롤백하면-새로-쓴-글은-어디로-갈까)에서 읽을 수 있습니다.
 
 ## 가장 쉬운 실행 (Mac · Kafka 01)
 

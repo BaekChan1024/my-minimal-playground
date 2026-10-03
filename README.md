@@ -53,6 +53,8 @@ Kafka 02는 `./play-kafka-02` 또는 Mac의 `Kafka-02.command`로 시작합니�
 
 [Database 01 — 커넥션 풀의 대기 시간](database/01-connection-pool/README.md)은 커넥션 획득·점유·SQL·잠금 대기를 구분합니다. `./play-database-01` 또는 Mac의 `Database-01.command`로 실행하며, 고정 버전은 `database-01-v1`입니다. [블로그 글](https://blog.baekchan.com/post/쿼리는-빠른데-api는-왜-느릴까-커넥션-풀의-대기-시간)에서 상세 해설을 읽을 수 있습니다.
 
+[Database 02 — VACUUM과 공간 재사용](database/02-vacuum-space/README.md)은 삭제·내부 공간 재사용·오래된 스냅샷·파일 재작성을 비교합니다. `./play-database-02` 또는 `Database-02.command`, 고정 버전 `database-02-v1`로 실행합니다. [블로그 글](https://blog.baekchan.com/post/delete했는데-db-용량은-왜-그대로일까-vacuum과-공간-재사용).
+
 ## 서비스 복구 실습
 
 [전환 후 데이터 복구 실습](operations/01-cutover-recovery/README.md)은 새 글·수정·삭제·파일·복구 후 다음 쓰기를 확인합니다. `./play-recovery-01` 또는 Mac의 `Recovery-01.command`로 실행하고, 고정 버전은 `recovery-01-v1`입니다. 설명은 [블로그 글](https://blog.baekchan.com/post/서비스-전환-후-롤백하면-새로-쓴-글은-어디로-갈까)에서 읽을 수 있습니다.

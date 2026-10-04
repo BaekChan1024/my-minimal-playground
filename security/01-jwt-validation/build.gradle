@@ -1,0 +1,25 @@
+plugins { id 'application' }
+repositories { mavenCentral() }
+java { toolchain { languageVersion = JavaLanguageVersion.of(21) } }
+dependencies {
+    implementation platform('org.springframework.boot:spring-boot-dependencies:4.0.1')
+    implementation 'org.springframework:spring-webmvc'
+    implementation 'org.springframework:spring-test'
+    implementation 'org.springframework.security:spring-security-config'
+    implementation 'org.springframework.security:spring-security-oauth2-resource-server'
+    implementation 'org.springframework.security:spring-security-oauth2-jose'
+    implementation 'org.springframework.security:spring-security-test'
+    implementation 'jakarta.servlet:jakarta.servlet-api'
+    runtimeOnly 'ch.qos.logback:logback-classic'
+}
+dependencyLocking { lockAllConfigurations() }
+application { mainClass = 'playground.security.JwtLab' }
+tasks.named('run', JavaExec) { standardInput = System.in; maxHeapSize = '512m' }
+tasks.register('verifyLab', JavaExec) {
+    group = 'verification'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = application.mainClass
+    args 'verify'
+    maxHeapSize = '512m'
+}
+tasks.named('check') { dependsOn 'verifyLab' }

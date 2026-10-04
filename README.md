@@ -108,3 +108,7 @@ quit
 `kafka-01-v1` 태그는 최초 글의 명령어 실습을 그대로 보존합니다. 쉬운 실행 도구는 `kafka-01-v1.1`부터 포함됩니다.
 
 Kafka 06은 `./play-kafka-06` 또는 `Kafka-06.command`로 실행합니다. 자동 검증은 `./play-kafka-06 verify`, 고정 버전은 `kafka-06-v1`입니다.
+
+## JWT 검증 실습
+
+[모의 인증과 실제 JWT 검증](security/01-jwt-validation/README.md)은 decoder 호출, 서명·claim 정책과 API 권한을 비교합니다. `./play-security-01` 또는 Mac의 `Security-01.command`, 고정 버전 `security-jwt-01-v1`로 실행합니다. 전체 해설은 [개발 블로그](https://blog.baekchan.com)에 발행 준비 중입니다.

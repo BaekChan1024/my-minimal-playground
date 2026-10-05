@@ -61,6 +61,8 @@ Kafka 02는 `./play-kafka-02` 또는 Mac의 `Kafka-02.command`로 시작합니�
 
 [Database 05 — 인덱스의 쓰기 비용과 HOT](database/05-index-write-cost/README.md)는 INSERT WAL·인덱스 공간·갱신 컬럼과 페이지 여유를 비교합니다. `./play-database-05` 또는 `Database-05.command`, 고정 버전 `database-05-v1`로 실행합니다. [블로그 글](https://blog.baekchan.com/post/인덱스는-많을수록-좋을까-조회-이득과-쓰기-비용).
 
+[Database 06 — JOIN은 테이블을 어떻게 읽을까? — Nested Loop·Hash Join·Merge Join](database/06-join-plans/README.md)는 `./play-database-06` 또는 `Database-06.command`로 실행합니다. 고정 버전 `database-06-v1`. [블로그 글](https://blog.baekchan.com/post/join은-테이블을-어떻게-읽을까-nested-loophash-joinmerge-join).
+
 ## 서비스 복구 실습
 
 [전환 후 데이터 복구 실습](operations/01-cutover-recovery/README.md)은 새 글·수정·삭제·파일·복구 후 다음 쓰기를 확인합니다. `./play-recovery-01` 또는 Mac의 `Recovery-01.command`로 실행하고, 고정 버전은 `recovery-01-v1`입니다. 설명은 [블로그 글](https://blog.baekchan.com/post/서비스-전환-후-롤백하면-새로-쓴-글은-어디로-갈까)에서 읽을 수 있습니다.

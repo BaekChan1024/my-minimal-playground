@@ -55,6 +55,8 @@ Kafka 02는 `./play-kafka-02` 또는 Mac의 `Kafka-02.command`로 시작합니�
 
 [Database 02 — VACUUM과 공간 재사용](database/02-vacuum-space/README.md)은 삭제·내부 공간 재사용·오래된 스냅샷·파일 재작성을 비교합니다. `./play-database-02` 또는 `Database-02.command`, 고정 버전 `database-02-v1`로 실행합니다. [블로그 글](https://blog.baekchan.com/post/delete했는데-db-용량은-왜-그대로일까-vacuum과-공간-재사용).
 
+[Database 03 — 실행 계획과 통계](database/03-query-plan/README.md)는 조회 범위·오래된 통계·버퍼 접근을 비교합니다. `./play-database-03` 또는 `Database-03.command`, 고정 버전 `database-03-v1`로 실행합니다. [블로그 글](https://blog.baekchan.com/post/인덱스를-만들었는데-왜-안-쓸까-실행-계획과-통계).
+
 ## 서비스 복구 실습
 
 [전환 후 데이터 복구 실습](operations/01-cutover-recovery/README.md)은 새 글·수정·삭제·파일·복구 후 다음 쓰기를 확인합니다. `./play-recovery-01` 또는 Mac의 `Recovery-01.command`로 실행하고, 고정 버전은 `recovery-01-v1`입니다. 설명은 [블로그 글](https://blog.baekchan.com/post/서비스-전환-후-롤백하면-새로-쓴-글은-어디로-갈까)에서 읽을 수 있습니다.

@@ -69,6 +69,8 @@ Kafka 02는 `./play-kafka-02` 또는 Mac의 `Kafka-02.command`로 시작합니�
 
 [Database 09 — 존재만 확인하는데 COUNT(*)가 필요할까? — EXISTS와 JOIN 중복](database/09-exists-and-joins/README.md)는 `./play-database-09` 또는 `Database-09.command`로 실행합니다. 고정 버전 `database-09-v1`. [블로그 글](https://blog.baekchan.com/post/존재만-확인하는데-count가-필요할까-exists와-join-중복).
 
+[Database 10 — 주문 없는 고객을 찾았는데 왜 0명일까? — NOT IN·NOT EXISTS와 NULL](database/10-anti-joins-null/README.md)는 `./play-database-10` 또는 `Database-10.command`로 실행합니다. 고정 버전 `database-10-v1`. [블로그 글](https://blog.baekchan.com/post/주문-없는-고객을-찾았는데-왜-0명일까-not-in-not-exists와-null).
+
 ## 서비스 복구 실습
 
 [전환 후 데이터 복구 실습](operations/01-cutover-recovery/README.md)은 새 글·수정·삭제·파일·복구 후 다음 쓰기를 확인합니다. `./play-recovery-01` 또는 Mac의 `Recovery-01.command`로 실행하고, 고정 버전은 `recovery-01-v1`입니다. 설명은 [블로그 글](https://blog.baekchan.com/post/서비스-전환-후-롤백하면-새로-쓴-글은-어디로-갈까)에서 읽을 수 있습니다.

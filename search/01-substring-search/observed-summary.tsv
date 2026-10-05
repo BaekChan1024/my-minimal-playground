@@ -1,0 +1,85 @@
+rows	term	kind	phase	median_ms	root_buffers	read_buffers	plan
+5000	희	list	btree	13.62	458	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	희	count	btree	13.635	458	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	희귀	list	btree	14.422	458	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	희귀	count	btree	14.228	458	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	희귀표식	list	btree	15.226	458	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	희귀표식	count	btree	15.026	458	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	검색	list	btree	9.991	487	0	Limit > Sort > Hash Join > Seq Scan > Hash > Seq Scan
+5000	검색	count	btree	10.038	487	0	Aggregate > Hash Join > Seq Scan > Hash > Seq Scan
+5000	검색 안내	list	btree	10.869	487	0	Limit > Sort > Hash Join > Seq Scan > Hash > Seq Scan
+5000	검색 안내	count	btree	10.868	487	0	Aggregate > Hash Join > Seq Scan > Hash > Seq Scan
+5000	needlemarker	list	btree	13.56	458	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	needlemarker	count	btree	13.521	458	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	NOTFOUND	list	btree	13.384	455	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	NOTFOUND	count	btree	13.446	455	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	희	list	trigram	13.749	458	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	희	count	trigram	13.641	458	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	희귀	list	trigram	14.184	458	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	희귀	count	trigram	14.387	458	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	희귀표식	list	trigram	0.033	17	0	Limit > Sort > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+5000	희귀표식	count	trigram	0.027	17	0	Aggregate > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+5000	검색	list	trigram	10.132	487	0	Limit > Sort > Hash Join > Seq Scan > Hash > Seq Scan
+5000	검색	count	trigram	9.965	487	0	Aggregate > Hash Join > Seq Scan > Hash > Seq Scan
+5000	검색 안내	list	trigram	11.01	487	0	Limit > Sort > Hash Join > Seq Scan > Hash > Seq Scan
+5000	검색 안내	count	trigram	11.036	487	0	Aggregate > Hash Join > Seq Scan > Hash > Seq Scan
+5000	needlemarker	list	trigram	0.031	57	0	Limit > Sort > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+5000	needlemarker	count	trigram	0.035	57	0	Aggregate > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+5000	NOTFOUND	list	trigram	0.031	34	0	Limit > Sort > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+5000	NOTFOUND	count	trigram	0.034	34	0	Aggregate > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+5000	희	list	trigram_ordered	13.473	458	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	희	count	trigram_ordered	13.806	458	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	희귀	list	trigram_ordered	14.153	458	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	희귀	count	trigram_ordered	14.016	458	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+5000	희귀표식	list	trigram_ordered	0.021	17	0	Limit > Sort > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+5000	희귀표식	count	trigram_ordered	0.019	17	0	Aggregate > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+5000	검색	list	trigram_ordered	0.122	106	0	Limit > Nested Loop > Index Scan:search_order > Index Scan:content_pkey
+5000	검색	count	trigram_ordered	10.017	487	0	Aggregate > Hash Join > Seq Scan > Hash > Seq Scan
+5000	검색 안내	list	trigram_ordered	0.117	106	0	Limit > Nested Loop > Index Scan:search_order > Index Scan:content_pkey
+5000	검색 안내	count	trigram_ordered	11.251	487	0	Aggregate > Hash Join > Seq Scan > Hash > Seq Scan
+5000	needlemarker	list	trigram_ordered	0.046	57	0	Limit > Sort > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+5000	needlemarker	count	trigram_ordered	0.051	57	0	Aggregate > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+5000	NOTFOUND	list	trigram_ordered	0.028	34	0	Limit > Sort > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+5000	NOTFOUND	count	trigram_ordered	0.022	34	0	Aggregate > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+50000	희	list	btree	137.27	4576	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	희	count	btree	137.249	4576	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	희귀	list	btree	140.155	4576	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	희귀	count	btree	140.43	4576	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	희귀표식	list	btree	150.86	4576	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	희귀표식	count	btree	151.035	4576	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	검색	list	btree	103.549	4865	0	Limit > Sort > Hash Join > Seq Scan > Hash > Seq Scan
+50000	검색	count	btree	101.844	4865	0	Aggregate > Hash Join > Seq Scan > Hash > Seq Scan
+50000	검색 안내	list	btree	113.447	4865	0	Limit > Sort > Hash Join > Seq Scan > Hash > Seq Scan
+50000	검색 안내	count	btree	111.383	4865	0	Aggregate > Hash Join > Seq Scan > Hash > Seq Scan
+50000	needlemarker	list	btree	134.613	4576	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	needlemarker	count	btree	134.669	4576	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	NOTFOUND	list	btree	133.038	4546	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	NOTFOUND	count	btree	132.354	4546	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	희	list	trigram	135.482	4576	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	희	count	trigram	137.325	4576	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	희귀	list	trigram	142.078	4576	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	희귀	count	trigram	142.285	4576	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	희귀표식	list	trigram	0.047	55	0	Limit > Sort > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+50000	희귀표식	count	trigram	0.033	55	0	Aggregate > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+50000	검색	list	trigram	105.304	4865	0	Limit > Sort > Hash Join > Seq Scan > Hash > Seq Scan
+50000	검색	count	trigram	102.524	4865	0	Aggregate > Hash Join > Seq Scan > Hash > Seq Scan
+50000	검색 안내	list	trigram	38.807	4919	0	Limit > Sort > Hash Join > Seq Scan > Hash > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body
+50000	검색 안내	count	trigram	35.9	4919	0	Aggregate > Hash Join > Seq Scan > Hash > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body
+50000	needlemarker	list	trigram	5.488	392	0	Limit > Sort > Hash Join > Seq Scan > Hash > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body
+50000	needlemarker	count	trigram	5.992	392	0	Aggregate > Hash Join > Seq Scan > Hash > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body
+50000	NOTFOUND	list	trigram	0.026	41	0	Limit > Sort > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+50000	NOTFOUND	count	trigram	0.026	41	0	Aggregate > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+50000	희	list	trigram_ordered	137.143	4576	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	희	count	trigram_ordered	136.263	4576	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	희귀	list	trigram_ordered	140.751	4576	0	Limit > Sort > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	희귀	count	trigram_ordered	141.354	4576	0	Aggregate > Nested Loop > Seq Scan > Index Scan:content_pkey
+50000	희귀표식	list	trigram_ordered	0.05	55	0	Limit > Sort > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+50000	희귀표식	count	trigram_ordered	0.038	55	0	Aggregate > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+50000	검색	list	trigram_ordered	0.133	108	0	Limit > Nested Loop > Index Scan:search_order > Index Scan:content_pkey
+50000	검색	count	trigram_ordered	101.645	4865	0	Aggregate > Hash Join > Seq Scan > Hash > Seq Scan
+50000	검색 안내	list	trigram_ordered	0.125	108	0	Limit > Nested Loop > Index Scan:search_order > Index Scan:content_pkey
+50000	검색 안내	count	trigram_ordered	37.587	4919	0	Aggregate > Hash Join > Seq Scan > Hash > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body
+50000	needlemarker	list	trigram_ordered	0.077	103	0	Limit > Sort > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+50000	needlemarker	count	trigram_ordered	0.066	103	0	Aggregate > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+50000	NOTFOUND	list	trigram_ordered	0.035	41	0	Limit > Sort > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey
+50000	NOTFOUND	count	trigram_ordered	0.038	41	0	Aggregate > Nested Loop > Bitmap Heap Scan > BitmapOr > Bitmap Index Scan:trgm_title > Bitmap Index Scan:trgm_excerpt > Bitmap Index Scan:trgm_body > Index Scan:content_pkey

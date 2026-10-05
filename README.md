@@ -111,4 +111,4 @@ Kafka 06은 `./play-kafka-06` 또는 `Kafka-06.command`로 실행합니다. 자�
 
 ## JWT 검증 실습
 
-[모의 인증과 실제 JWT 검증](security/01-jwt-validation/README.md)은 decoder 호출, 서명·claim 정책과 API 권한을 비교합니다. `./play-security-01` 또는 Mac의 `Security-01.command`, 고정 버전 `security-jwt-01-v1`로 실행합니다. 전체 해설은 [개발 블로그](https://blog.baekchan.com)에 발행 준비 중입니다.
+[모의 인증과 실제 JWT 검증](security/01-jwt-validation/README.md)은 decoder 호출, 서명·claim 정책과 API 권한을 비교합니다. `./play-security-01` 또는 Mac의 `Security-01.command`, 고정 버전 `security-jwt-01-v1`로 실행합니다. 전체 해설은 [인증 테스트가 통과하면 JWT 검증도 끝난 걸까?](https://blog.baekchan.com/post/인증-테스트가-통과하면-jwt-검증도-끝난-걸까)에서 읽을 수 있습니다.

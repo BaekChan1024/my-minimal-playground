@@ -65,6 +65,8 @@ Kafka 02는 `./play-kafka-02` 또는 Mac의 `Kafka-02.command`로 시작합니�
 
 [Database 07 — 정렬은 언제 디스크를 사용할까? — work_mem과 임시 파일](database/07-sort-memory/README.md)는 `./play-database-07` 또는 `Database-07.command`로 실행합니다. 고정 버전 `database-07-v1`. [블로그 글](https://blog.baekchan.com/post/정렬은-언제-디스크를-사용할까-workmem과-임시-파일).
 
+[Database 08 — COUNT(*)는 왜 오래 걸릴까? — 집계와 읽는 양](database/08-count-aggregation/README.md)는 `./play-database-08` 또는 `Database-08.command`로 실행합니다. 고정 버전 `database-08-v1`. [블로그 글](https://blog.baekchan.com/post/count는-왜-오래-걸릴까-집계와-읽는-양).
+
 ## 서비스 복구 실습
 
 [전환 후 데이터 복구 실습](operations/01-cutover-recovery/README.md)은 새 글·수정·삭제·파일·복구 후 다음 쓰기를 확인합니다. `./play-recovery-01` 또는 Mac의 `Recovery-01.command`로 실행하고, 고정 버전은 `recovery-01-v1`입니다. 설명은 [블로그 글](https://blog.baekchan.com/post/서비스-전환-후-롤백하면-새로-쓴-글은-어디로-갈까)에서 읽을 수 있습니다.

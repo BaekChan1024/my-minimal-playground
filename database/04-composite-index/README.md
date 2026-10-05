@@ -1,6 +1,6 @@
 # Database 04 — 복합 인덱스의 컬럼 순서
 
-[전체 블로그 글](https://blog.baekchan.com/post/복합-인덱스는-왜-컬럼-순서가-중요할까) · 고정 태그 `database-04-v1`
+[전체 블로그 글](https://blog.baekchan.com/post/복합-인덱스는-왜-컬럼-순서가-중요할까) · 고정 태그 `database-04-v1.1`
 
 JDK21과 Git이 필요합니다. 처음에는 Gradle·PostgreSQL 바이너리 다운로드 네트워크가 필요합니다.
 Docker나 별도 DB 설치 없이 loopback 임시 PostgreSQL에서 실행하고 종료 시 정리합니다.
@@ -11,8 +11,8 @@ Docker나 별도 DB 설치 없이 loopback 임시 PostgreSQL에서 실행하고 
 ```
 
 Mac은 `Database-04.command`를 실행해도 됩니다. 새 복사본에서 고정 태그로 이동하려면
-`git switch --detach database-04-v1`을 사용하세요. 기존 복사본에서는 변경을 보존한 뒤
-`git fetch origin tag database-04-v1`로 태그를 가져오세요.
+`git switch --detach database-04-v1.1`을 사용하세요. 기존 복사본에서는 변경을 보존한 뒤
+`git fetch origin tag database-04-v1.1`로 태그를 가져오세요.
 
 ## 실행 전 예상
 

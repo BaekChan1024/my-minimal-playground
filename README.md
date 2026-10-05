@@ -57,7 +57,7 @@ Kafka 02는 `./play-kafka-02` 또는 Mac의 `Kafka-02.command`로 시작합니�
 
 [Database 03 — 실행 계획과 통계](database/03-query-plan/README.md)는 조회 범위·오래된 통계·버퍼 접근을 비교합니다. `./play-database-03` 또는 `Database-03.command`, 고정 버전 `database-03-v1`로 실행합니다. [블로그 글](https://blog.baekchan.com/post/인덱스를-만들었는데-왜-안-쓸까-실행-계획과-통계).
 
-[Database 04 — 복합 인덱스의 컬럼 순서](database/04-composite-index/README.md)는 범위 조회·정렬·PostgreSQL18 반복 탐색을 비교합니다. `./play-database-04` 또는 `Database-04.command`, 고정 버전 `database-04-v1`로 실행합니다. [블로그 글](https://blog.baekchan.com/post/복합-인덱스는-왜-컬럼-순서가-중요할까).
+[Database 04 — 복합 인덱스의 컬럼 순서](database/04-composite-index/README.md)는 범위 조회·정렬·PostgreSQL18 반복 탐색을 비교합니다. `./play-database-04` 또는 `Database-04.command`, 고정 버전 `database-04-v1.1`로 실행합니다. [블로그 글](https://blog.baekchan.com/post/복합-인덱스는-왜-컬럼-순서가-중요할까).
 
 ## 서비스 복구 실습
 

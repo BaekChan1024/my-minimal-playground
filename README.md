@@ -119,4 +119,4 @@ Kafka 06은 `./play-kafka-06` 또는 `Kafka-06.command`로 실행합니다. 자�
 
 ## 부분 문자열 검색 실습
 
-[검색어와 검색 인덱스](search/01-substring-search/README.md)는 짧은 한국어·긴 검색어, list/count와 정렬 비용을 비교합니다. `./play-search-01` 또는 `Search-01.command`로 실행합니다. 고정 태그는 `search-substring-01-v1`이며 글 링크는 발행 후 연결합니다.
+[검색어와 검색 인덱스](search/01-substring-search/README.md)는 짧은 한국어·긴 검색어, list/count와 정렬 비용을 비교합니다. `./play-search-01` 또는 `Search-01.command`로 실행합니다. 고정 태그는 `search-substring-01-v1`이며 전체 설명은 [블로그 글](https://blog.baekchan.com/post/블로그-검색에는-어떤-인덱스가-실제로-도움이-될까)에서 읽을 수 있습니다.

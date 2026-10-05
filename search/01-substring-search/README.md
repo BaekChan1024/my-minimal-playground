@@ -12,4 +12,4 @@ Mac은 `Search-01.command`를 실행합니다. Python3는 결과 요약에만 �
 
 5천/5만 행 합성 데이터, 일곱 검색어, list/count, 기존 B-tree/추가 GIN 세 개/정렬 대응 B-tree 추가를 비교합니다. 각 쿼리 예열 1회 뒤 EXPLAIN ANALYZE 3회를 기록합니다. 병렬/JIT를 꺼 계획 비교를 단순화합니다. 운영 부하 실험이나 애플리케이션 전체 API 응답 시간 측정은 아닙니다.
 
-원고 전문은 블로그에만 발행하고 완료 후 링크를 연결합니다. 고정 태그 예정: `search-substring-01-v1`. 문제는 EXERCISES.md, 해설은 ANSWERS.md를 확인하세요.
+전체 설명은 [블로그 글](https://blog.baekchan.com/post/블로그-검색에는-어떤-인덱스가-실제로-도움이-될까)에서 읽을 수 있습니다. 고정 태그: `search-substring-01-v1`. 문제는 EXERCISES.md, 해설은 ANSWERS.md를 확인하세요.

@@ -1,0 +1,22 @@
+plugins { id 'application' }
+repositories { mavenCentral() }
+java { toolchain { languageVersion = JavaLanguageVersion.of(21) } }
+dependencies {
+    implementation platform('org.springframework.boot:spring-boot-dependencies:4.0.1')
+    implementation 'io.zonky.test:embedded-postgres:2.2.2'
+    implementation enforcedPlatform('io.zonky.test.postgres:embedded-postgres-binaries-bom:18.4.0')
+    runtimeOnly 'ch.qos.logback:logback-classic'
+    runtimeOnly 'io.zonky.test.postgres:embedded-postgres-binaries-darwin-arm64v8'
+}
+dependencyLocking { lockAllConfigurations() }
+application { mainClass = 'playground.existence.ExistenceLab' }
+tasks.named('run', JavaExec) { standardInput = System.in; maxHeapSize = '512m' }
+tasks.register('verifyLab', JavaExec) {
+    group = 'verification'
+    description = 'Verify database lesson 09 against isolated PostgreSQL.'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = application.mainClass
+    args 'verify'
+    maxHeapSize = '512m'
+}
+tasks.named('check') { dependsOn 'verifyLab' }

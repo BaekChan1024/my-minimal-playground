@@ -1,0 +1,7 @@
+{"experiment":"1-naive","completionOrder":["B","A"],"finalView":"naive-A"}
+{"experiment":"2-key-isolation","current":"key-B","oldCache":"key-A"}
+{"experiment":"3-cancellation","signalAborted":true,"oldConnectionClosed":true,"serverWorkCompleted":true,"oldCache":null,"current":"abort-B"}
+{"experiment":"4-missing-key","requestedInput":"B","current":"bad-A","BRequestReceived":false}
+{"experiment":"5-return-to-fresh-cache","current":"cache-A","ACalls":1,"fetchStatus":"idle"}
+{"experiment":"6-invalidation","duringFetch":{"data":"cache-A","isFetching":true,"isPending":false},"after":"cache-A-v2"}
+{"result":"PASS","experiments":6,"assertions":18,"node":"v22.22.0","queryCore":"5.101.2"}

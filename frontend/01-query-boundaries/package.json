@@ -1,0 +1,1 @@
+{"name":"search-query-boundaries-lab","private":true,"version":"1.0.0","type":"module","engines":{"node":">=22"},"scripts":{"test":"node lab.mjs"},"dependencies":{"@tanstack/query-core":"5.101.2"}}

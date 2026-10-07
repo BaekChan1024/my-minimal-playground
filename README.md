@@ -120,3 +120,7 @@ Kafka 06은 `./play-kafka-06` 또는 `Kafka-06.command`로 실행합니다. 자�
 ## 부분 문자열 검색 실습
 
 [검색어와 검색 인덱스](search/01-substring-search/README.md)는 짧은 한국어·긴 검색어, list/count와 정렬 비용을 비교합니다. `./play-search-01` 또는 `Search-01.command`로 실행합니다. 고정 태그는 `search-substring-01-v1`이며 전체 설명은 [블로그 글](https://blog.baekchan.com/post/블로그-검색에는-어떤-인덱스가-실제로-도움이-될까)에서 읽을 수 있습니다.
+
+## 프론트엔드 검색 캐시 실습
+
+[검색 요청·캐시·취소](frontend/01-query-boundaries/README.md): `./play-frontend-01` 또는 `Frontend-01.command`. Node.js22 이상, 고정 버전 `frontend-query-01-v1`. 글은 [개발 노트](https://blog.baekchan.com)에 발행 대기이며 전문은 이 저장소에 올리지 않습니다.

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+root="$(cd "$(dirname "$0")" && pwd)"
+cd "$root/frontend/01-query-boundaries"
+command -v node >/dev/null || { echo 'Node.js 22 이상을 먼저 설치하세요.'; exit 1; }
+node -e 'if(Number(process.versions.node.split(".")[0])<22){console.error("Node.js 22 이상이 필요합니다.");process.exit(1)}'
+if [[ "${1:-}" != "--verify" ]]; then
+  cat <<'QUESTIONS'
+A 요청 후 B 요청, 응답은 B→A라면?
+키 분리 / signal 전달 / 잘못된 키 / A→B→A 캐시 / 무효화 결과를 예상하세요.
+진행: Enter, 종료: q
+QUESTIONS
+  read -r answer
+  [[ "$answer" != q ]] || exit 0
+fi
+npm ci --ignore-scripts --no-audit --no-fund
+npm test

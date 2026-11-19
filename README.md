@@ -129,3 +129,5 @@ Kafka 06은 `./play-kafka-06` 또는 `Kafka-06.command`로 실행합니다. 자�
 ## 이벤트 설계 실습
 
 [Zero Payload와 Fat Event](architecture/01-zero-payload/README.md)는 같은 변경을 상태 전체를 싣는 이벤트와 ID만 싣는 이벤트로 보내고 순서 역전·큰 본문·삭제·조회 API 장애·조회 횟수·복제 지연을 비교합니다. `./play-zero-payload-01` 또는 `ZeroPayload-01.command`로 실행합니다. 고정 태그는 `zero-payload-01-v1`이며 전체 설명은 [블로그 글](https://blog.baekchan.com/post/이벤트에-id만-보내면-무엇이-달라질까-zero-payload와-fat-event-여섯-가지-실험)에서 읽을 수 있습니다.
+
+[Zero Payload 소비자와 원본 조회 장애](architecture/02-zero-payload-source-failure/README.md)는 ID만 받는 소비자가 원본 API에 의존할 때의 파티션 막힘, DLT 재처리, 원본 전체 장애와 /health 확인, 느린 조회의 처리 방식, max.poll.interval.ms 초과를 비교합니다. `./play-zero-payload-02` 또는 `ZeroPayload-02.command`로 실행합니다. 고정 태그는 `zero-payload-02-v1`이며 블로그 발행 후 글 링크를 연결합니다.

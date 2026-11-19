@@ -1,6 +1,6 @@
 # Architecture 01 — Zero Payload 이벤트와 Fat Event 비교
 
-상세 글: 블로그 발행 후 연결합니다.
+상세 글: [블로그에서 읽기](https://blog.baekchan.com/post/이벤트에-id만-보내면-무엇이-달라질까-zero-payload와-fat-event-여섯-가지-실험)
 
 JDK21과 Git이 필요합니다. 실제 임시 Kafka 4.1.1(브로커1·컨트롤러1)과 JDK 내장 HTTP 서버(loopback 임의 포트)를 실행합니다. Docker나 외부 Kafka·DB는 필요 없습니다. 첫 실행 시 Maven Central에서 의존성을 받습니다. macOS ARM64에서 검증했으며 다른 OS는 미검증입니다.
 

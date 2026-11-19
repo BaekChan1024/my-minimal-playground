@@ -1,6 +1,6 @@
 # Architecture 02 — Zero Payload 소비자와 원본 조회 장애
 
-상세 글: 블로그 발행 후 연결합니다. 1편: [Architecture 01](../01-zero-payload/README.md)
+상세 글: [블로그에서 읽기](https://blog.baekchan.com/post/원본-api가-죽으면-zero-payload-소비자는-어떻게-될까-파티션-막힘dltmaxpollintervalms-실습). 1편: [Architecture 01](../01-zero-payload/README.md)
 
 JDK21과 Git이 필요합니다. 실제 임시 Kafka 4.1.1(브로커1·컨트롤러1)과 JDK 내장 HTTP 서버(loopback 임의 포트)를 실행합니다. Docker나 외부 Kafka·DB는 필요 없습니다. 첫 실행 시 Maven Central에서 의존성을 받습니다. macOS ARM64에서 검증했으며 다른 OS는 미검증입니다. 전체 실행에 약 45초 걸립니다.
 

@@ -125,3 +125,7 @@ Kafka 06은 `./play-kafka-06` 또는 `Kafka-06.command`로 실행합니다. 자�
 ## 프론트엔드 검색 캐시 실습
 
 [검색 요청·캐시·취소](frontend/01-query-boundaries/README.md): `./play-frontend-01` 또는 `Frontend-01.command`. Node.js22 이상, 고정 버전 `frontend-query-01-v1`. 글은 [개발 노트](https://blog.baekchan.com)에 발행 대기이며 전문은 이 저장소에 올리지 않습니다.
+
+## 이벤트 설계 실습
+
+[Zero Payload와 Fat Event](architecture/01-zero-payload/README.md)는 같은 변경을 상태 전체를 싣는 이벤트와 ID만 싣는 이벤트로 보내고 순서 역전·큰 본문·삭제·조회 API 장애·조회 횟수·복제 지연을 비교합니다. `./play-zero-payload-01` 또는 `ZeroPayload-01.command`로 실행합니다. 고정 태그는 `zero-payload-01-v1`이며 블로그 발행 후 글 링크를 연결합니다.

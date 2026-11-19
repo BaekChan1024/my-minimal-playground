@@ -1,6 +1,6 @@
 # Architecture 03 — Saga: 오케스트레이션과 코레오그래피
 
-상세 글: 블로그 발행 후 링크를 추가합니다.
+상세 글: [블로그에서 읽기](https://blog.baekchan.com/post/saga를-중앙에서-조율할까-이벤트로-이어-갈까-같은-saga를-두-번-구현해-비교한-여섯-가지-실험)
 
 JDK21과 Git이 필요합니다. 실제 임시 Kafka 4.1.1(브로커1·컨트롤러1)과 임시 PostgreSQL 18.4를 실행합니다. Docker나 외부 Kafka·DB는 필요 없습니다. 첫 실행 시 Maven Central에서 의존성(PostgreSQL 바이너리 포함)을 받습니다. macOS ARM64에서 검증했으며 다른 OS는 미검증입니다.
 

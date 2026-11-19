@@ -131,3 +131,7 @@ Kafka 06은 `./play-kafka-06` 또는 `Kafka-06.command`로 실행합니다. 자�
 [Zero Payload와 Fat Event](architecture/01-zero-payload/README.md)는 같은 변경을 상태 전체를 싣는 이벤트와 ID만 싣는 이벤트로 보내고 순서 역전·큰 본문·삭제·조회 API 장애·조회 횟수·복제 지연을 비교합니다. `./play-zero-payload-01` 또는 `ZeroPayload-01.command`로 실행합니다. 고정 태그는 `zero-payload-01-v1`이며 전체 설명은 [블로그 글](https://blog.baekchan.com/post/이벤트에-id만-보내면-무엇이-달라질까-zero-payload와-fat-event-여섯-가지-실험)에서 읽을 수 있습니다.
 
 [Zero Payload 소비자와 원본 조회 장애](architecture/02-zero-payload-source-failure/README.md)는 ID만 받는 소비자가 원본 API에 의존할 때의 파티션 막힘, DLT 재처리, 원본 전체 장애와 /health 확인, 느린 조회의 처리 방식, max.poll.interval.ms 초과를 비교합니다. `./play-zero-payload-02` 또는 `ZeroPayload-02.command`로 실행합니다. 고정 태그는 `zero-payload-02-v1`이며 전체 설명은 [블로그 글](https://blog.baekchan.com/post/원본-api가-죽으면-zero-payload-소비자는-어떻게-될까-파티션-막힘dltmaxpollintervalms-실습)에서 읽을 수 있습니다.
+
+## Saga 실습
+
+[오케스트레이션과 코레오그래피](architecture/03-saga-orchestration-choreography/README.md)는 같은 "AI 요약 게시" Saga를 중앙 조율과 이벤트 연쇄로 각각 구현하고, 실제 임시 Kafka·PostgreSQL(서비스마다 database 하나) 위에서 메시지 수·보상 순서·멈춘 Saga 찾기·의존·단계 추가를 비교합니다. `./play-saga-02` 또는 `Saga-02.command`로 실행합니다. 고정 태그는 `saga-02-v1`입니다.

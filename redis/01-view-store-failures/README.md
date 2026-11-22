@@ -1,6 +1,6 @@
 # Redis 01 — 조회수 중복 제거가 Redis에 있을 때: 죽거나, 느리거나, 재시작하거나, 꽉 차거나
 
-상세 글: 블로그 발행 후 링크를 추가합니다.
+상세 글: [블로그에서 읽기](https://blog.baekchan.com/post/redis가-죽거나-느리거나-꽉-차면-조회수는-어떻게-될까-장애재시작메모리네트워크-실험)
 
 JDK 21, Git, 그리고 **로컬 `redis-server`(Redis 7 이상)**가 필요합니다. 다른 실습과 달리 Redis는 실습이 내려받지 않습니다. macOS에서는 `brew install redis`로 설치하거나 `REDIS_SERVER`에 실행 파일 경로를 지정하세요. PostgreSQL 18.4는 첫 실행 때 Maven Central에서 받아 임시로 띄웁니다. Docker는 필요 없습니다. PostgreSQL 바이너리 의존성 때문에 macOS ARM64 전용이며 Redis 8.10.3에서 검증했습니다.
 

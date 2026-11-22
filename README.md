@@ -144,7 +144,7 @@ Kafka 06은 `./play-kafka-06` 또는 `Kafka-06.command`로 실행합니다. 자�
 
 ## Redis 실습
 
-[조회수 중복 제거가 Redis에 있을 때](redis/01-view-store-failures/README.md)는 세션별 중복 제거(`SET NX EX`)와 날짜별 순위(sorted set)를 Redis에 둔 조회수 기록에서 Redis가 죽고(즉시 거부와 쌓아 두기), 느려지고(명령마다의 타임아웃과 응답만 늦은 쓰기), 재시작하고(AOF 없음·everysec·always), 꽉 차고(allkeys-lru·volatile-ttl·noeviction), 네트워크 건너편에 있을 때(왕복 수와 Lua 스크립트)를 실험합니다. JDK 21과 로컬 `redis-server`(Redis 7 이상)가 필요합니다. `./play-redis-02` 또는 `Redis-02.command`로 실행합니다. 고정 태그는 `redis-02-v2`이며 블로그 발행 후 링크를 추가합니다.
+[조회수 중복 제거가 Redis에 있을 때](redis/01-view-store-failures/README.md)는 세션별 중복 제거(`SET NX EX`)와 날짜별 순위(sorted set)를 Redis에 둔 조회수 기록에서 Redis가 죽고(즉시 거부와 쌓아 두기), 느려지고(명령마다의 타임아웃과 응답만 늦은 쓰기), 재시작하고(AOF 없음·everysec·always), 꽉 차고(allkeys-lru·volatile-ttl·noeviction), 네트워크 건너편에 있을 때(왕복 수와 Lua 스크립트)를 실험합니다. JDK 21과 로컬 `redis-server`(Redis 7 이상)가 필요합니다. `./play-redis-02` 또는 `Redis-02.command`로 실행합니다. 고정 태그는 `redis-02-v2`이며 전체 설명은 [블로그 글](https://blog.baekchan.com/post/redis가-죽거나-느리거나-꽉-차면-조회수는-어떻게-될까-장애재시작메모리네트워크-실험)에서 읽을 수 있습니다.
 
 ## 장애 대응 실습
 

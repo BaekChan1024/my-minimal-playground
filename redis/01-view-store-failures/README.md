@@ -2,12 +2,12 @@
 
 상세 글: 블로그 발행 후 링크를 추가합니다.
 
-JDK 21, Git, 그리고 **로컬 `redis-server`(Redis 7 이상)**가 필요합니다. 다른 실습과 달리 Redis는 실습이 내려받지 않습니다. macOS에서는 `brew install redis`로 설치하거나 `REDIS_SERVER`에 실행 파일 경로를 지정하세요. PostgreSQL 18.4는 첫 실행 때 Maven Central에서 받아 임시로 띄웁니다. Docker는 필요 없습니다. macOS ARM64(Redis 8.10.3)에서 검증했으며 다른 OS·버전은 미검증입니다.
+JDK 21, Git, 그리고 **로컬 `redis-server`(Redis 7 이상)**가 필요합니다. 다른 실습과 달리 Redis는 실습이 내려받지 않습니다. macOS에서는 `brew install redis`로 설치하거나 `REDIS_SERVER`에 실행 파일 경로를 지정하세요. PostgreSQL 18.4는 첫 실행 때 Maven Central에서 받아 임시로 띄웁니다. Docker는 필요 없습니다. PostgreSQL 바이너리 의존성 때문에 macOS ARM64 전용이며 Redis 8.10.3에서 검증했습니다.
 
 ```bash
 git clone https://github.com/BaekChan1024/my-minimal-playground.git
 cd my-minimal-playground
-git switch --detach redis-02-v1
+git switch --detach redis-02-v2
 ./play-redis-02
 ```
 
@@ -22,7 +22,7 @@ Mac에서는 `Redis-02.command`를 더블클릭해도 됩니다. 실험마다 �
 | `view:{글}:{세션 SHA-256}` | `SET NX EX 86400` | 이 세션의 첫 조회인지 판정 |
 | `popular:DEV:{날짜}` | `ZINCRBY`, `EXPIRE 8일` | 그날 글별 조회수 |
 
-조회 기록 순서: `SET NX` → (처음이면) PostgreSQL `view_count +1` → `ZINCRBY` → `EXPIRE`. Redis 명령이 실패하면 그 조회는 세지 않습니다.
+조회 기록 순서(운영과 같음): 한 트랜잭션 안에서 `SET NX` → (처음이면) PostgreSQL `view_count +1` → `ZINCRBY` → `EXPIRE` → COMMIT. Redis 명령이 실패하면 그 조회는 세지 않습니다.
 
 Lettuce 6.8.1 설정은 블로그 운영과 같습니다: 명령 타임아웃 300ms(`TimeoutOptions`), 연결·핸드셰이크 1초(`RedisURI` timeout), 자동 재연결, 연결이 끊긴 동안 명령 즉시 거부(`REJECT_COMMANDS`). Redis는 실행마다 임시 디렉터리·임의 포트로 띄우고, 기본 사용자에 운영과 같은 ACL(`+@all -@dangerous -@admin`)을 겁니다. 관측(INFO·CONFIG·SCAN)은 실행마다 새 비밀번호를 쓰는 별도 사용자로만 합니다.
 

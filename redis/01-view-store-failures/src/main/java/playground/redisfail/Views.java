@@ -27,7 +27,7 @@ import java.util.Optional;
  *
  * <ul>
  *   <li>POSTGRES: 한 트랜잭션에서 content_view INSERT … ON CONFLICT, 처음이면 view_count +1
- *   <li>REDIS: SET NX EX 24h로 판정 → 처음이면 view_count +1(트랜잭션) → ZINCRBY, EXPIRE 8일
+ *   <li>REDIS: 한 트랜잭션 안에서 SET NX EX 24h로 판정 → 처음이면 view_count +1 → ZINCRBY, EXPIRE 8일 → COMMIT
  *   <li>REDIS_SCRIPT: 판정·순위 증가·만료를 Lua 스크립트 한 번(EVAL)으로 → 처음이면 view_count +1
  * </ul>
  */
@@ -118,13 +118,19 @@ final class Views implements AutoCloseable {
         }
     }
 
+    /** 운영과 같은 순서: 한 트랜잭션 안에서 판정 → 조회수 +1 → 순위 → 만료 → COMMIT. */
     private Admission redisThreeCalls(long post, String session) {
-        Admission a = admit(post, session);
-        if (a == Admission.FIRST) {
-            countInPostgres(post);
-            rank(post);
+        try (Connection c = db.ds.getConnection()) {
+            Admission a = admit(post, session);
+            if (a == Admission.FIRST) {
+                increment(c, post);
+                rank(post); // UPDATE한 행의 잠금을 쥔 채로 Redis를 두 번 더 오간다
+            }
+            c.commit();
+            return a;
+        } catch (SQLException e) {
+            throw new IllegalStateException(e);
         }
-        return a;
     }
 
     private Admission redisScript(long post, String session) {

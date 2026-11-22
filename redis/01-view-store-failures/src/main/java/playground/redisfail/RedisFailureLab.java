@@ -63,7 +63,7 @@ public final class RedisFailureLab {
         for (boolean reject : List.of(true, false)) {
             db.reset();
             try (var redis = new RedisProcess("no"); var views = new Views(redis.port, db, reject)) {
-                record Event(long atMs, Admission admission, double ms) {}
+                record Event(long atMs, long endMs, Admission admission, double ms) {}
                 var events = new ArrayList<Event>();
                 long t0 = System.nanoTime();
                 long killAt = 1_000, restartAt = 2_000;
@@ -84,20 +84,21 @@ public final class RedisFailureLab {
                     if (restartedAt >= 0 && (firstAfter >= 20 || now > restartAt + 8_000)) break;
                     Result r = views.record(Mode.REDIS, 1 + i % Db.POSTS, "outage-" + reject + "-" + i);
                     i++;
-                    events.add(new Event(now, r.admission(), r.nanos() / 1e6));
+                    events.add(new Event(now, (System.nanoTime() - t0) / 1_000_000, r.admission(), r.nanos() / 1e6));
                     if (restartedAt >= 0 && r.admission() == Admission.FIRST) firstAfter++;
                     if (killed && restartedAt < 0 && rankingDuringOutage == null) rankingDuringOutage = views.ranking();
                     Thread.sleep(10);
                 }
                 var before = events.stream().filter(e -> e.atMs() < killAt).toList();
                 var down = events.stream().filter(e -> e.atMs() >= killAt && e.atMs() < restartAt).toList();
-                long rs = restartedAt;
-                var after = events.stream().filter(e -> e.atMs() >= rs).toList();
+                // 재시작을 시작한 뒤에 보낸 요청은 모두 "재시작 뒤"로 센다(재시작 순간 보낸 요청 포함).
+                var after = events.stream().filter(e -> e.atMs() >= restartAt).toList();
                 long recoveredAt = after.stream()
                         .filter(e -> e.admission() == Admission.FIRST)
-                        .mapToLong(Event::atMs)
+                        .mapToLong(Event::endMs)
                         .findFirst()
                         .orElse(-1);
+                var afterMs = after.stream().limit(5).map(Event::ms).toList();
                 long counted = events.stream().filter(e -> e.admission() == Admission.FIRST).count();
                 long uncountedDown = down.stream().filter(e -> e.admission() == Admission.UNAVAILABLE).count();
                 long uncountedAfter = after.stream().filter(e -> e.admission() == Admission.UNAVAILABLE).count();
@@ -112,9 +113,11 @@ public final class RedisFailureLab {
                 if (reject) check(max(downMs) < 50, mode + " fails fast, max " + max(downMs));
                 else check(pct(downMs, 50) >= 250, mode + " waits for the command timeout, p50 " + pct(downMs, 50));
                 System.out.printf("PASS outage client=%s requestsWhileDown=%d uncounted=%d latencyWhileDown p50=%.1fms max=%.1fms"
-                                + " recoveredAfterRestart=%dms uncountedAfterRestart=%d counted=%d postgres=%d%n",
+                                + " firstCountedAfterRestart=%dms uncountedAfterRestart=%d firstRequestsAfterRestart=%s counted=%d"
+                                + " postgres=%d%n",
                         mode, down.size(), uncountedDown, pct(downMs, 50), max(downMs), recoveredAt - restartedAt,
-                        uncountedAfter, counted, pg);
+                        uncountedAfter, after.stream().limit(5).map(e -> e.admission().name().charAt(0) + String.format("%.0f", e.ms())).toList(),
+                        counted, pg);
             }
         }
     }

@@ -148,4 +148,4 @@ Kafka 06은 `./play-kafka-06` 또는 `Kafka-06.command`로 실행합니다. 자�
 
 ## 장애 대응 실습
 
-[AI 공급자가 실패할 때](architecture/07-ai-provider-resilience/README.md)는 가짜 AI 공급자를 503 장애·처리 후 응답 유실·느린 성공·자동 요약 몰림으로 실패시키고, PostgreSQL 작업 대기열 위에서 재시도·Circuit Breaker(Resilience4j)·멱등키·Bulkhead를 비교합니다. `./play-resilience-01` 또는 `Resilience-01.command`로 실행합니다. 고정 태그는 `resilience-01-v1`입니다.
+[AI 공급자가 실패할 때](architecture/07-ai-provider-resilience/README.md)는 가짜 AI 공급자를 503 장애·처리 후 응답 유실·느린 성공·자동 요약 몰림으로 실패시키고, PostgreSQL 작업 대기열 위에서 재시도·Circuit Breaker(Resilience4j)·멱등키·Bulkhead를 비교합니다. `./play-resilience-01` 또는 `Resilience-01.command`로 실행합니다. 고정 태그는 `resilience-01-v1`이며 전체 설명은 [블로그 글](https://blog.baekchan.com/post/ai-공급자가-실패하면-다시-보낼까-재시도circuit-breakerbulkhead를-실험하고-운영에-붙이기)에서 읽을 수 있습니다.

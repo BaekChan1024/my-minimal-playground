@@ -1,6 +1,6 @@
 # Architecture 07 — AI 공급자가 실패할 때: 재시도·Circuit Breaker·Bulkhead
 
-상세 글: 블로그 발행 후 링크를 추가합니다.
+상세 글: [블로그에서 읽기](https://blog.baekchan.com/post/ai-공급자가-실패하면-다시-보낼까-재시도circuit-breakerbulkhead를-실험하고-운영에-붙이기)
 
 JDK21과 Git이 필요합니다. 임시 PostgreSQL 18.4와 가짜 AI 공급자(이 프로세스 안의 로컬 HTTP 서버)를 실행합니다. 실제 AI 공급자는 호출하지 않으며 Docker나 외부 DB도 필요 없습니다. 첫 실행 시 Maven Central에서 의존성(PostgreSQL 바이너리, Resilience4j 2.4.0 포함)을 받습니다. macOS ARM64에서 검증했으며 다른 OS는 미검증입니다.
 

@@ -1,6 +1,6 @@
 # Architecture 05 — Saga: 격리가 없을 때 생기는 일
 
-상세 글: 블로그 발행 후 링크를 추가합니다.
+상세 글: [블로그에서 읽기](https://blog.baekchan.com/post/saga에는-격리가-없다-더티-리드갱신-손실오래된-읽기를-재현하고-대응책의-비용을-재다)
 
 JDK21과 Git이 필요합니다. 임시 PostgreSQL 18.4를 실행합니다. Docker나 외부 DB는 필요 없습니다. 첫 실행 시 Maven Central에서 의존성(PostgreSQL 바이너리 포함)을 받습니다. macOS ARM64에서 검증했으며 다른 OS는 미검증입니다.
 

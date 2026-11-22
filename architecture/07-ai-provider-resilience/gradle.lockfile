@@ -1,0 +1,25 @@
+# This is a Gradle generated file for dependency locking.
+# Manual edits can break the build and are not advised.
+# This file is expected to be part of source control.
+ch.qos.logback:logback-classic:1.5.22=runtimeClasspath,testRuntimeClasspath
+ch.qos.logback:logback-core:1.5.22=runtimeClasspath,testRuntimeClasspath
+com.zaxxer:HikariCP:7.0.2=compileClasspath,runtimeClasspath,testCompileClasspath,testRuntimeClasspath
+commons-codec:commons-codec:1.21.0=compileClasspath,runtimeClasspath,testCompileClasspath,testRuntimeClasspath
+commons-io:commons-io:2.21.0=compileClasspath,runtimeClasspath,testCompileClasspath,testRuntimeClasspath
+io.github.resilience4j:resilience4j-bulkhead:2.4.0=compileClasspath,runtimeClasspath,testCompileClasspath,testRuntimeClasspath
+io.github.resilience4j:resilience4j-circuitbreaker:2.4.0=compileClasspath,runtimeClasspath,testCompileClasspath,testRuntimeClasspath
+io.github.resilience4j:resilience4j-core:2.4.0=compileClasspath,runtimeClasspath,testCompileClasspath,testRuntimeClasspath
+io.zonky.test.postgres:embedded-postgres-binaries-bom:18.4.0=compileClasspath,runtimeClasspath,testCompileClasspath,testRuntimeClasspath
+io.zonky.test.postgres:embedded-postgres-binaries-darwin-amd64:18.4.0=runtimeClasspath,testRuntimeClasspath
+io.zonky.test.postgres:embedded-postgres-binaries-darwin-arm64v8:18.4.0=runtimeClasspath,testRuntimeClasspath
+io.zonky.test.postgres:embedded-postgres-binaries-linux-amd64-alpine:18.4.0=runtimeClasspath,testRuntimeClasspath
+io.zonky.test.postgres:embedded-postgres-binaries-linux-amd64:18.4.0=runtimeClasspath,testRuntimeClasspath
+io.zonky.test.postgres:embedded-postgres-binaries-windows-amd64:18.4.0=runtimeClasspath,testRuntimeClasspath
+io.zonky.test:embedded-postgres:2.2.2=compileClasspath,runtimeClasspath,testCompileClasspath,testRuntimeClasspath
+org.apache.commons:commons-compress:1.28.0=compileClasspath,runtimeClasspath,testCompileClasspath,testRuntimeClasspath
+org.apache.commons:commons-lang3:3.20.0=compileClasspath,runtimeClasspath,testCompileClasspath,testRuntimeClasspath
+org.checkerframework:checker-qual:3.52.0=runtimeClasspath,testRuntimeClasspath
+org.postgresql:postgresql:42.7.10=compileClasspath,runtimeClasspath,testCompileClasspath,testRuntimeClasspath
+org.slf4j:slf4j-api:2.0.17=compileClasspath,runtimeClasspath,testCompileClasspath,testRuntimeClasspath
+org.tukaani:xz:1.11=compileClasspath,runtimeClasspath,testCompileClasspath,testRuntimeClasspath
+empty=annotationProcessor,testAnnotationProcessor

@@ -140,4 +140,4 @@ Kafka 06은 `./play-kafka-06` 또는 `Kafka-06.command`로 실행합니다. 자�
 
 [격리가 없을 때](architecture/05-saga-isolation/README.md)는 Saga의 단계가 따로 커밋되어 생기는 더티 리드·갱신 손실·오래된 읽기·한도 예약의 비용을 정해 둔 실행 순서와 동시 실행으로 재현하고, 단계 재배치·결과 감추기·작업 중 표시·내 것일 때만 되돌리기·다시 읽기를 비교합니다. `./play-saga-04` 또는 `Saga-04.command`로 실행합니다. 고정 태그는 `saga-04-v1`이며 전체 설명은 [블로그 글](https://blog.baekchan.com/post/saga에는-격리가-없다-더티-리드갱신-손실오래된-읽기를-재현하고-대응책의-비용을-재다)에서 읽을 수 있습니다.
 
-[오케스트레이터가 죽거나 Saga가 멈출 때](architecture/06-saga-durability/README.md)는 오케스트레이터 크래시(Outbox와 "커밋하고 바로 보내기"), 참여자 중단(시한과 늦은 사용량 기록), 피벗 뒤 응답 유실(기다림·재전송·보상)을 실험합니다. `./play-saga-05` 또는 `Saga-05.command`로 실행합니다. 고정 태그는 `saga-05-v1`입니다.
+[오케스트레이터가 죽거나 Saga가 멈출 때](architecture/06-saga-durability/README.md)는 오케스트레이터 크래시(Outbox와 "커밋하고 바로 보내기"), 참여자 중단(시한과 늦은 사용량 기록), 피벗 뒤 응답 유실(기다림·재전송·보상)을 실험합니다. `./play-saga-05` 또는 `Saga-05.command`로 실행합니다. 고정 태그는 `saga-05-v1`이며 전체 설명은 [블로그 글](https://blog.baekchan.com/post/오케스트레이터가-죽거나-saga가-멈추면-크래시참여자-중단피벗-뒤-응답-유실-실험)에서 읽을 수 있습니다.

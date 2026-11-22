@@ -137,3 +137,5 @@ Kafka 06은 `./play-kafka-06` 또는 `Kafka-06.command`로 실행합니다. 자�
 [오케스트레이션과 코레오그래피](architecture/03-saga-orchestration-choreography/README.md)는 같은 "AI 요약 게시" Saga를 중앙 조율과 이벤트 연쇄로 각각 구현하고, 실제 임시 Kafka·PostgreSQL(서비스마다 database 하나) 위에서 메시지 수·보상 순서·멈춘 Saga 찾기·의존·단계 추가를 비교합니다. `./play-saga-02` 또는 `Saga-02.command`로 실행합니다. 고정 태그는 `saga-02-v1`이며 전체 설명은 [블로그 글](https://blog.baekchan.com/post/saga를-중앙에서-조율할까-이벤트로-이어-갈까-같은-saga를-두-번-구현해-비교한-여섯-가지-실험)에서 읽을 수 있습니다.
 
 [메시지 장애](architecture/04-saga-message-faults/README.md)는 같은 Saga에 중복 전달·오프셋 커밋 전 소비자 재시작·취소가 원 요청보다 먼저 도착하는 경우·끝난 Saga에 늦게 온 응답을 넣고, Inbox·상태 가드·업무 규칙의 상태 조건·"취소됨" 표시가 각각 무엇을 막는지 비교합니다. `./play-saga-03` 또는 `Saga-03.command`로 실행합니다. 고정 태그는 `saga-03-v1`이며 전체 설명은 [블로그 글](https://blog.baekchan.com/post/saga-메시지가-두-번-오거나-늦게-오면-중복재전달취소-선착늦은-응답-실험)에서 읽을 수 있습니다.
+
+[격리가 없을 때](architecture/05-saga-isolation/README.md)는 Saga의 단계가 따로 커밋되어 생기는 더티 리드·갱신 손실·오래된 읽기·한도 예약의 비용을 정해 둔 실행 순서와 동시 실행으로 재현하고, 단계 재배치·결과 감추기·작업 중 표시·내 것일 때만 되돌리기·다시 읽기를 비교합니다. `./play-saga-04` 또는 `Saga-04.command`로 실행합니다. 고정 태그는 `saga-04-v1`입니다.
